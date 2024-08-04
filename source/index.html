@@ -6,6 +6,10 @@
   <title>Навание проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -14,10 +18,16 @@
   <!-- <div class="background-wrapper"> -->
   <header class="page_header">
     <a class="page-header__logo-link" href="index.html">
-      <img class="page-header__logo-image logo-image" src="#" alt="Логотип Кэт Энерджи" width="33" height="38">
+      <picture>
+        <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-logo.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
+        <img class="page-header__logo-image logo-image" src="images/mobile-logo.svg" alt="Логотип Кэт Энерджи" width="33" height="38">
+      </picture>
     </a>
-    <img class="page-header__logo-text logo-text" src="#" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
-
+    <picture>
+      <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
+      <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
+    </picture>
     <nav class="page-header__navigation">
       <ul class="page-header__navigation-list site-list">
         <li class="site-list__item site-list__item--active"><a href="index.html">главная</a></li>
@@ -31,7 +41,11 @@
     <section class="header__hero">
       <h1 class="hero__title">Функциональное питание для котов</h1>
       <p class="hero__description">Занялся собой? Займись котом!</p>
-      <img class="hero-iamge" src="#" alt="Упаковка еды для котов" width="280" height="270">
+      <picture>
+        <source type="image/png" media="(min-width:1200px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
+        <source type="image/jpg" media="(min-width:768px)" srcset="images/index-can-tablet@1x.jpg 1x, images/index-can-tablet@2x.jpg 2x" width="709" height="609">
+        <img class="hero-iamge" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка еды для котов" width="280" height="270">
+      </picture>
       <!-- button или ссылка -->
       <button class="hero__button button" type="button">подобрать программу</button>
     </section>
@@ -116,35 +130,37 @@
           Конюшенная, д. 19/8
           Санкт-Петербург</address>
       </div>
-
-      <img class="location-guide__image map-image" src="#" alt=" Карта" width="320" height="362">
-
+      <picture>
+        <source type="image/png" media="(min-width:1200px)" srcset="images/maps/desktop-map@1x.png 1x, images/maps/desktop-map@2x.png 2x" width="1200" height="400">
+        <source type="image/png" media="(min-width:768px)" srcset="images/maps/tablet-map@1x.png 1x, images/maps/tablet-map@2x.png 2x" width="768" height="400">
+        <img class="location-guide__image map-image" src="images/maps/mobile-map@1x.png" srcset="images/maps/mobile-map@2x.png 2x" alt=" Карта" width="320" height="362">
+      </picture>
     </section>
   </main>
   <!-- Футер -->
   <footer class="page-footer">
-    <img class="footer-logo logo-text" src="#" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
+    <img class="footer-logo logo-text" src="images/footer-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
 
     <ul class="footer__social-list social-list">
       <li class="social-list__item">
         <a class="social-list__link vkontakte" href="#">
-          1
+          <img src="images/social-icons/vk.svg" alt="Вконтакте." width="27" height="17">
         </a>
       </li>
       <li class="social-list__item"><a class="social-list__link youtube" href="#">
-          1
+          <img src="images/social-icons/youtube.svg" alt="Ютуб." width="24" height="19">
         </a>
       </li>
       <li class="social-list__item">
         <a class="social-list__link telegramm" href="#">
-          1
+          <img src="images/social-icons/telegramm.svg" alt="Телеграм." width="20" height="18">
         </a>
       </li>
     </ul>
 
     <div class="footer__copyright copyright">
       <span class="copyright__title">HTML Academy</span>
-      <img class="copyright__logo" src="#" alt="Логотип HTML Academy" width="27" height="34">
+      <img class="copyright__logo" src="images/academy-logo.svg" alt="Логотип HTML Academy" width="27" height="34">
     </div>
 
   </footer>
