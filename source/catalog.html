@@ -27,22 +27,23 @@
       <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
       <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
     </picture>
-    <nav class="page-header__navigation">
-      <ul class="page-header__navigation-list site-list">
-        <li class="site-list__item site-list__item--active"><a href="index.html">главная</a></li>
-        <li class="site-list__item"><a href="catalog.html">каталог продукции</a></li>
-        <li class="site-list__item"><a href="#">подбор программы</a></li>
+    <nav class="main_nav">
+      <ul class="main_nav__navigation-list navigation-list">
+        <li class="navigation-list__item navigation__item--current"><a href="index.html">главная</a></li>
+        <li class="navigation-list__item"><a href="catalog.html">каталог продукции</a></li>
+        <li class="navigation-list__item"><a href="#">подбор программы</a></li>
       </ul>
     </nav>
 
     <button class="page_header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
   </header>
   <main class="main-catalog">
+
     <section class="catalog">
       <h1 class="catalog__title">Каталог продукции</h1>
       <!-- Карточки товаров -->
-      <ul class="product-card__list">
-        <li class="product-card__item">
+      <ul class="product-cards-list">
+        <li class="product-cards-list__item">
           <!-- 1 -->
           <ul class="product-card">
             <li>
@@ -74,7 +75,7 @@
           </ul>
 
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 2 -->
           <ul class="product-card">
             <li>
@@ -108,7 +109,7 @@
           </ul>
 
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 3 -->
           <ul class="product-card">
             <li>
@@ -139,7 +140,7 @@
             </li>
           </ul>
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 4 -->
           <ul class="product-card">
             <li>
@@ -172,7 +173,7 @@
           </ul>
 
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 5 -->
           <ul class="product-card">
             <li>
@@ -205,7 +206,7 @@
           </ul>
 
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 6 -->
           <ul class="product-card">
             <li>
@@ -238,7 +239,7 @@
           </ul>
 
         </li>
-        <li class="product-card__item">
+        <li class="product-cards-list__item">
           <!-- 7 -->
           <ul class="product-card">
             <li>
@@ -273,17 +274,14 @@
 
         </li>
         <!-- Показать все -->
-        <li class="product-card__item">
-
+        <li class="product-cards-list__item">
           <ul class="more-card">
             <li>
               <button class="more-card__plus-button" type="button">
                 <span class="more-card__title">Показать еще 100500 товаров</span>
+                <span class="more-card__description">На самом деле вкусов гораздо больше!
+                  показать все</span>
               </button>
-            </li>
-            <li>
-              <h2 class="more-card__description">На самом деле вкусов гораздо больше!
-                показать все</h2>
             </li>
             <li>
               <button class="more-card__button button" type="button">показать все</button>
@@ -293,92 +291,92 @@
         </li>
       </ul>
     </section>
-
+    <!-- Дополнительные товары -->
     <section class="additional-products">
       <h2 class="additional-products__title">
         Дополнительные товары
       </h2>
 
-      <ul class="additional-products__list">
-        <li class="additional-products__item">
+      <ul class="additional-product-cards__list">
+        <li class="additional-product-cards__item">
 
-          <ul class="additional-product">
-            <li class="additional-product__item">
-              <h3 class="additional-product__title">Сахарозаменитель</h3>
+          <ul class="additional-product-card">
+            <li class="additional-product-card__item">
+              <h3 class="additional-product-card__title">Сахарозаменитель</h3>
             </li>
-            <li class="additional-product__item">
-              <p class="additional-product__description">1 упаковка (100 г)</p>
-              <span class="additional-product__price">200 ₽</span>
+            <li class="additional-product-card__item">
+              <span class="additional-product-card__description">1 упаковка (100 г)</span>
+              <span class="additional-product-card__price">200 ₽</span>
             </li>
-            <li class="additional-product__item">
-              <button class="additional-product__button" type="button">заказать</button>
+            <li class="additional-product-card__item">
+              <button class="additional-product-card__button" type="button">заказать</button>
             </li>
           </ul>
 
         </li>
-        <li class="additional-products__item">
+        <li class="additional-product-cards__item">
 
-          <ul class="additional-product">
-            <li class="additional-product__item">
-              <h3 class="additional-product__title">Питьевая вода</h3>
+          <ul class="additional-product-card">
+            <li class="additional-product-card__item">
+              <h3 class="additional-product-card__title">Питьевая вода</h3>
             </li>
-            <li class="additional-product__item">
-              <p class="additional-product__description">5 литров</p>
-              <span class="additional-product__price">50 ₽</span>
+            <li class="additional-product-card__item">
+              <span class="additional-product-card__description">5 литров</span>
+              <span class="additional-product-card__price">50 ₽</span>
             </li>
-            <li class="additional-product__item">
-              <button class="additional-product__button" type="button">заказать</button>
+            <li class="additional-product-card__item">
+              <button class="additional-product-card__button" type="button">заказать</button>
             </li>
           </ul>
 
         </li>
-        <li class="additional-products__item">
+        <li class="additional-product-cards__item">
 
-          <ul class="additional-product">
-            <li class="additional-product__item">
-              <h3 class="additional-product__title">молоко</h3>
+          <ul class="additional-product-card">
+            <li class="additional-product-card__item">
+              <h3 class="additional-product-card__title">молоко</h3>
             </li>
-            <li class="additional-product__item">
-              <p class="additional-product__description">1 литр</p>
-              <span class="additional-product__price">100 ₽</span>
+            <li class="additional-product-card__item">
+              <span class="additional-product-card__description">1 литр</span>
+              <span class="additional-product-card__price">100 ₽</span>
             </li>
-            <li class="additional-product__item">
-              <button class="additional-product__button" type="button">заказать</button>
+            <li class="additional-product-card__item">
+              <button class="additional-product-card__button" type="button">заказать</button>
             </li>
           </ul>
 
         </li>
-        <li class="additional-products__item">
+        <li class="additional-product-cards__item">
 
-          <ul class="additional-product">
-            <li class="additional-product__item">
-              <h3 class="additional-product__title">витамины</h3>
+          <ul class="additional-product-card">
+            <li class="additional-product-card__item">
+              <h3 class="additional-product-card__title">витамины</h3>
             </li>
-            <li class="additional-product__item">
-              <p class="additional-product__description">1 упаковка (30 г)</p>
-              <span class="additional-product__price">300 ₽</span>
+            <li class="additional-product-card__item">
+              <span class="additional-product-card__description">1 упаковка (30 г)</span>
+              <span class="additional-product-card__price">300 ₽</span>
             </li>
-            <li class="additional-product__item">
-              <button class="additional-product__button" type="button">заказать</button>
+            <li class="additional-product-card__item">
+              <button class="additional-product-card__button" type="button">заказать</button>
             </li>
           </ul>
 
+        </li>
+        <li class="additional-product-card__item promotion">
+          <p class="promotion__description">Закажите все
+            и получите чехол для
+            кота в подарок!</p>
         </li>
       </ul>
 
-      <div class="additional-products__promotion promotion">
-        <p class="promotion__description">Закажите все
-          и получите чехол для
-          кота в подарок!</p>
-      </div>
     </section>
 
     <!-- Подписаться -->
     <section class="subscribe">
       <h2 class="subscribe__title">Акции и новинки</h2>
-      <label class="subscribe__description" for="email-subscribe">Подпишитесь на наши новости и не пропустите ни одного предложения!</label>
 
       <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
+        <label class="subscribe-form__label" for="email-subscribe">Подпишитесь на наши новости и не пропустите ни одного предложения!</label>
         <input class="subscribe-form__input" placeholder="кuklachev@gmail.com" id="email-subscribe" name="e-mail" type="email" required>
         <button class="subscribe-form__button button" type="submit">Подписаться</button>
       </form>

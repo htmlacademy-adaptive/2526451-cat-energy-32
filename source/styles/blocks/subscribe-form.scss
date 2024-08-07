@@ -1,0 +1,19 @@
+.subscribe-form__label {
+  font-family: $seccond-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.subscribe-form__input::placeholder {
+  font-family: $seccond-font;
+  font-size: 20px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.subscribe-form__button {
+  @include basik-button;
+}

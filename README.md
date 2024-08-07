@@ -2,7 +2,7 @@
 
 * Студент: [Родион Янушкевич](https://up.htmlacademy.ru/adaptive/32/user/2526451).
 * Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
-* Сайт:[Кэт Энерджи](https://rodionyanushkevich.github.io/2526451-cat-energy-32/).
+* Сайт: [Кэт Энерджи](https://rodionyanushkevich.github.io/2526451-cat-energy-32/).
 
 ---
 

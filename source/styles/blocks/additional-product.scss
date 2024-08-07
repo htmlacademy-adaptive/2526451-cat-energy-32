@@ -1,0 +1,19 @@
+.additional-product-card__title {
+  font-family: $seccond-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.additional-product-card__price,
+.additional-product-card__description {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+
+.additional-product-card__button {
+  display: inline-flex;
+
+  @include basik-button();
+}

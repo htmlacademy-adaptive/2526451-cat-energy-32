@@ -1,0 +1,27 @@
+.hero__title {
+  font-family: $seccond-font;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+
+  color: #ffffff;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+  }
+}
+
+.hero__description {
+  font-family: $seccond-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.hero__button {
+  @include basik-button ();
+}

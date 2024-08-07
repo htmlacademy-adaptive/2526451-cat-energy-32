@@ -1,7 +1,30 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/navigation-list.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/main-goals.scss";
+@import "./blocks/goals-item.scss";
+@import "./blocks/result.scss";
+@import "./blocks/step-list.scss";
+@import "./blocks/example.scss";
+@import "./blocks/expenses.scss";
+/* Как нас найти */
+@import "./blocks/location-description.scss";
+/* Каталог */
+@import "./blocks/catalog.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/more-card.scss";
+/* Дополнительные товары */
+@import "./blocks/additional-products.scss";
+@import "./blocks/additional-product.scss";
+@import "./blocks/promotion.scss";
+/* Подписаться */
+@import "./blocks/subscribe.scss";
+@import "./blocks/subscribe-form.scss";
+@import "./blocks/copyright.scss";

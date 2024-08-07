@@ -1,0 +1,10 @@
+.subscribe__title {
+  @include catalog__title;
+}
+
+.subscribe__description {
+  font-family: $seccond-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
