@@ -1,4 +1,23 @@
-.page_header__background-wrapper {
+.page-header__background-wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.page-header__logo-link {
+  text-decoration: none;
+}
+
+.page-header__nav-toggle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  border: none;
+
+  background-color: #ffffff;
+  background-image: url("../../icons/mobile-toggle.svg");
+  background-position: 4px 50%;
+
+  cursor: pointer;
 }

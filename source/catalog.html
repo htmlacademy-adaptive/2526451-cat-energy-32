@@ -15,8 +15,9 @@
 
 <body class="page__body">
 
-  <header class="page_header">
+  <header class="page-header">
     <a class="page-header__logo-link" href="index.html">
+
       <picture>
         <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-logo.svg" width="70" height="59">
         <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
@@ -29,13 +30,12 @@
     </picture>
     <nav class="main_nav">
       <ul class="main_nav__navigation-list navigation-list">
-        <li class="navigation-list__item navigation__item--current"><a href="index.html">главная</a></li>
-        <li class="navigation-list__item"><a href="catalog.html">каталог продукции</a></li>
+        <li class="navigation-list__item"><a href="index.html">главная</a></li>
+        <li class="navigation-list__item navigation-list__item--current"><a href="catalog.html">каталог продукции</a></li>
         <li class="navigation-list__item"><a href="#">подбор программы</a></li>
       </ul>
     </nav>
-
-    <button class="page_header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
+    <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
   </header>
   <main class="main-catalog">
 
@@ -297,8 +297,8 @@
         Дополнительные товары
       </h2>
 
-      <ul class="additional-product-cards__list">
-        <li class="additional-product-cards__item">
+      <ul class="additional-product-cards-list">
+        <li class="additional-product-cards-list__item">
 
           <ul class="additional-product-card">
             <li class="additional-product-card__item">
@@ -314,7 +314,7 @@
           </ul>
 
         </li>
-        <li class="additional-product-cards__item">
+        <li class="additional-product-cards-list__item">
 
           <ul class="additional-product-card">
             <li class="additional-product-card__item">
@@ -330,7 +330,7 @@
           </ul>
 
         </li>
-        <li class="additional-product-cards__item">
+        <li class="additional-product-cards-list__item">
 
           <ul class="additional-product-card">
             <li class="additional-product-card__item">
@@ -346,7 +346,7 @@
           </ul>
 
         </li>
-        <li class="additional-product-cards__item">
+        <li class="additional-product-cards-list__item">
 
           <ul class="additional-product-card">
             <li class="additional-product-card__item">
@@ -362,13 +362,13 @@
           </ul>
 
         </li>
-        <li class="additional-product-card__item promotion">
+        <!-- Акция -->
+        <li class="additional-product-cards-list__item promotion">
           <p class="promotion__description">Закажите все
             и получите чехол для
             кота в подарок!</p>
         </li>
       </ul>
-
     </section>
 
     <!-- Подписаться -->
@@ -400,30 +400,43 @@
 
   <!-- Футер -->
   <footer class="page-footer">
-    <img class="footer-logo logo-text" src="images/footer-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
+    <img class="page-footer__logo" src="images/desktop-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
 
-    <ul class="footer__social-list social-list">
+    <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
-        <a class="social-list__link vkontakte" href="#">
-          <img src="images/social-icons/vk.svg" alt="Вконтакте." width="27" height="17">
+        <a class="social-list__link vkontakte" href="#" title="нашва страница ВКонтекте">
+          <span class="visually-hidden">Вконтакте.</span>
+          <svg width="27" height="17">
+            <use href="images/social-icons/vk.svg#vk"></use>
+          </svg>
         </a>
       </li>
-      <li class="social-list__item"><a class="social-list__link youtube" href="#">
-          <img src="images/social-icons/youtube.svg" alt="Ютуб." width="24" height="19">
+      <li class="social-list__item">
+        <a class="social-list__link youtube" href="#" title="наш Ютуб-канал">
+          <span class="visually-hidden">Ютуб.</span>
+          <svg width="28" height="22">
+            <use href="images/social-icons/youtube.svg#youtube"></use>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
-        <a class="social-list__link telegramm" href="#">
-          <img src="images/social-icons/telegramm.svg" alt="Телеграм." width="20" height="18">
+        <a class="social-list__link telegram" href="#" title="наш Телеграм">
+          <span class="visually-hidden">Телеграм</span>
+          <svg width="20" height="18">
+            <use href="images/social-icons/telegram.svg#telegram"></use>
+          </svg>
         </a>
       </li>
     </ul>
-
-    <div class="footer__copyright copyright">
-      <span class="copyright__title">HTML Academy</span>
-      <img class="copyright__logo" src="images/academy-logo.svg" alt="Логотип HTML Academy" width="27" height="34">
+    <div class="page-footer__copyright">
+      <a class="copyright" href="#" title="Сайт HTML Academy">
+        <span class="copyright__title">HTML Academy</span>
+        <span class="visually-hidden">Логотип HTML Academy.</span>
+        <svg width="27" height="34">
+          <use class="copyright__logo" href="images/academy-logo.svg#html-logo"></use>
+        </svg>
+      </a>
     </div>
-
   </footer>
 </body>
 

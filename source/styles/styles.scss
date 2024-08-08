@@ -1,5 +1,6 @@
 /* GLOBAL */
 @import "./common/variables.scss";
+@import "./common/visually-hidden.scss";
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
@@ -8,9 +9,11 @@
 @import "./blocks/page-header.scss";
 @import "./blocks/navigation-list.scss";
 @import "./blocks/hero.scss";
+/* Цели */
 @import "./blocks/main-goals.scss";
 @import "./blocks/goals-item.scss";
 @import "./blocks/result.scss";
+/* Шаги */
 @import "./blocks/step-list.scss";
 @import "./blocks/example.scss";
 @import "./blocks/expenses.scss";
@@ -22,9 +25,13 @@
 @import "./blocks/more-card.scss";
 /* Дополнительные товары */
 @import "./blocks/additional-products.scss";
+@import "./blocks/additional-product-cards-list.scss";
 @import "./blocks/additional-product.scss";
 @import "./blocks/promotion.scss";
 /* Подписаться */
 @import "./blocks/subscribe.scss";
 @import "./blocks/subscribe-form.scss";
+/* Футер */
+@import "./blocks/page-footer.scss";
 @import "./blocks/copyright.scss";
+

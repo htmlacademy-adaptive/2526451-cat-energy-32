@@ -16,27 +16,27 @@
 <body class="page__body">
   <!-- бэкграунд?.... -->
   <header class="page-header">
-    <div class="page_header__background-wrapper">
+    <div class="page-header__background-wrapper">
       <a class="page-header__logo-link" href="index.html">
         <picture>
           <source type="image/ssvg+xml" media="(min-width:1200px)" srcset="images/desktop-logo.svg" width="70" height="59">
           <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
           <img class="page-header__logo-image logo-image" src="images/mobile-logo.svg" alt="Логотип Кэт Энерджи" width="33" height="38">
         </picture>
+        <picture>
+          <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
+          <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
+        </picture>
       </a>
-      <picture>
-        <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
-        <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
-      </picture>
       <nav class="main_nav">
         <ul class="main_nav__navigation-list navigation-list">
-          <li class="navigation-list__item navigation__item--current"><a href="index.html">главная</a></li>
+          <li class="navigation-list__item navigation-list__item--current"><a href="index.html">главная</a></li>
           <li class="navigation-list__item"><a href="catalog.html">каталог продукции</a></li>
           <li class="navigation-list__item"><a href="#">подбор программы</a></li>
         </ul>
       </nav>
 
-      <button class="page_header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
+      <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
     </div>
 
     <!-- сексция хедер?.... -->
@@ -57,13 +57,13 @@
 
     <section class="main-goals">
       <h2 class="visually-hidden">Цели</h2>
-      <div class="goals-item">
+      <div class="goals-item goals-item--sitting-cat">
         <h3 class="goals-item__title">похудение</h3>
         <p class="goals-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="goals-item__link" href="#">каталог slim</a>
       </div>
 
-      <div class="goals-item">
+      <div class="goals-item goals-item--walking-cat">
         <h3 class="goals-item__title">набор массы</h3>
         <p class="goals-item__description">Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить
@@ -76,16 +76,16 @@
       <h2 class="result__title">Как это работает</h2>
 
       <ol class="result__steps-list step-list">
-        <li class="steps-list__item">Функциональное питание
+        <li class="step-list__item">Функциональное питание
           содержит только полезные
           питательные вещества.</li>
-        <li class="steps-list__item">Выпускается в виде порошка,
+        <li class="step-list__item">Выпускается в виде порошка,
           который нужно лишь залить
           кипятком и готово.</li>
-        <li class="steps-list__item">Замените один-два приема
+        <li class="step-list__item">Замените один-два приема
           обычной еды на наше
           функциональное питание.</li>
-        <li class="steps-list__item">Уже через месяц наслаждайтесь
+        <li class="step-list__item">Уже через месяц наслаждайтесь
           изменениями к лучшему
           вашего питомца!</li>
       </ol>
@@ -138,31 +138,45 @@
     </section>
   </main>
   <!-- Футер -->
-  <footer class="page-footer">
-    <img class="footer-logo logo-text" src="images/footer-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
 
-    <ul class="footer__social-list social-list">
+  <footer class="page-footer">
+    <img class="page-footer__logo" src="images/desktop-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
+
+    <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
-        <a class="social-list__link vkontakte" href="#">
-          <img src="images/social-icons/vk.svg" alt="Вконтакте." width="27" height="17">
+        <a class="social-list__link vkontakte" href="#" title="нашва страница ВКонтекте">
+          <span class="visually-hidden">Вконтакте.</span>
+          <svg width="27" height="17">
+            <use href="images/social-icons/vk.svg#vk"></use>
+          </svg>
         </a>
       </li>
-      <li class="social-list__item"><a class="social-list__link youtube" href="#">
-          <img src="images/social-icons/youtube.svg" alt="Ютуб." width="24" height="19">
+      <li class="social-list__item">
+        <a class="social-list__link youtube" href="#" title="наш Ютуб-канал">
+          <span class="visually-hidden">Ютуб.</span>
+          <svg width="28" height="22">
+            <use href="images/social-icons/youtube.svg#youtube"></use>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
-        <a class="social-list__link telegramm" href="#">
-          <img src="images/social-icons/telegramm.svg" alt="Телеграм." width="20" height="18">
+        <a class="social-list__link telegram" href="#" title="наш Телеграм">
+          <span class="visually-hidden">Телеграм</span>
+          <svg width="20" height="18">
+            <use href="images/social-icons/telegram.svg#telegram"></use>
+          </svg>
         </a>
       </li>
     </ul>
-
-    <div class="footer__copyright copyright">
-      <span class="copyright__title">HTML Academy</span>
-      <img class="copyright__logo" src="images/academy-logo.svg" alt="Логотип HTML Academy" width="27" height="34">
+    <div class="page-footer__copyright">
+      <a class="copyright" href="#" title="Сайт HTML Academy">
+        <span class="copyright__title">HTML Academy</span>
+        <span class="visually-hidden">Логотип HTML Academy.</span>
+        <svg width="27" height="34">
+          <use class="copyright__logo" href="images/academy-logo.svg#html-logo"></use>
+        </svg>
+      </a>
     </div>
-
   </footer>
 </body>
 

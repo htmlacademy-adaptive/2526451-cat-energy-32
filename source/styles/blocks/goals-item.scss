@@ -1,4 +1,31 @@
+.goals-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 33px 18px 20px;
+  box-sizing: border-box;
+
+  background-color: #f2f2f2;
+}
+
+.goals-item--sitting-cat {
+  background-image: url("../../images/sitting-cat.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 21px;
+  background-size: 50px 53px;
+}
+
+.goals-item--walking-cat {
+  background-image: url("../../images/walking-cat.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 24px;
+  background-size: 67px 50px;
+}
+
 .goals-item__title {
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
 
   font-family: $seccond-font;
   font-size: 24px;
@@ -9,12 +36,22 @@
 }
 
 .goals-item__link {
+  display: flex;
+  width: 134px;
+  height: 24px;
+  align-items: center;
+
   font-family: $seccond-font;
   font-size: 16px;
   line-height: 16px;
-  text-align: center;
+
   text-transform: uppercase;
   color: #000000;
 
   text-decoration: none;
+
+  background-image: url("../../icons/arrow-right.svg");
+  background-position: center right 8px;
+  background-size: 24px 12px;
+  background-repeat: no-repeat;
 }

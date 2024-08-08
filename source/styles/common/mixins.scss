@@ -7,7 +7,13 @@
     font-display: swap;
   }
 }
-
+/*
+@mixin goals-item-backround-cat($cat-url,$cat-width,$cat-height) {
+  background-image: $cat-url;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  background-size: $cat-width $cat-height;
+*/
 @mixin basik-button() {
   font-family: "Oswald", sans-serif;
   font-style: normal;
