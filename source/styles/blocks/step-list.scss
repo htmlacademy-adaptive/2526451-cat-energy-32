@@ -4,13 +4,46 @@
   gap: 20px;
   margin: 0;
   padding: 0;
+
+  @media ($viewport-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // justify-content: ;
+    gap: 37px 19.92vw;
+  }
+
+  @media ($viewport-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
 }
 
 .step-list__item {
   display: flex;
   gap: 20px;
   align-items: center;
+
+  @media ($viewport-tablet) {
+    flex-direction: column;
+    align-items: start;
+    width: 29.95vw;
+
+    // ?
+    min-height: 280px;
+
+    box-sizing: border-box;
+    padding-bottom: 57px;
+    padding-top: 40px;
+  }
+
+  @media ($viewport-desktop) {
+    max-width: 17.36vw;
+  }
 }
+
 
 .step-list__item::before {
   content: "";
@@ -22,24 +55,29 @@
   background-color: #68b738;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @media ($viewport-tablet) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
-.step-list__item:nth-child(1)::before {
+.step-list__item--leaf::before {
   background-image: url("../../icons/leaf.svg");
   background-size: 30px 32px;
 }
 
-.step-list__item:nth-child(2)::before {
+.step-list__item--jar::before {
   background-image: url("../../icons/jar.svg");
   background-size: 29px 28.5px;
 }
 
-.step-list__item:nth-child(3)::before {
+.step-list__item--cutlery::before {
   background-image: url("../../icons/cutlery.svg");
   background-size: 25px 30px;
 }
 
-.step-list__item:nth-child(4)::before {
+.step-list__item--clock::before {
   background-image: url("../../icons/clock.svg");
   background-size: 26px 31px;
 }

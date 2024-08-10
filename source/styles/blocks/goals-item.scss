@@ -5,7 +5,16 @@
   padding: 30px 33px 18px 20px;
   box-sizing: border-box;
 
+  // flex-shrink: 0;
   background-color: #f2f2f2;
+
+  @media ($viewport-tablet) {
+    padding: 77px 67px 53px 52px;
+  }
+
+  @media ($viewport-desktop) {
+    padding: 77px 63px 55px 52px;
+  }
 }
 
 .goals-item--sitting-cat {
@@ -13,6 +22,16 @@
   background-repeat: no-repeat;
   background-position: 20px 21px;
   background-size: 50px 53px;
+
+  @media ($viewport-tablet) {
+    background-position: center right 63px;
+    background-size: 200px 211px;
+  }
+
+  @media ($viewport-desktop) {
+    background-position: 41px 52px;
+    background-size: 100px 106px;
+  }
 }
 
 .goals-item--walking-cat {
@@ -20,7 +39,18 @@
   background-repeat: no-repeat;
   background-position: 13px 24px;
   background-size: 67px 50px;
+
+  @media ($viewport-tablet) {
+    background-position: center right 29px;
+    background-size: 268px 200px;
+  }
+
+  @media ($viewport-desktop) {
+    background-position: 47px 33px;
+    background-size: 134px 106px;
+  }
 }
+
 
 .goals-item__title {
   padding: 0;
@@ -33,13 +63,44 @@
   text-transform: uppercase;
 
   color: #000000;
+
+  @media ($viewport-tablet) {
+    margin-left: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media ($viewport-desktop) {
+    width: auto;
+    margin-left: 214px;
+  }
+}
+
+.goals-item__description {
+  @media ($viewport-tablet) {
+    width: 340px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #000000;
+  }
+
+  @media ($viewport-desktop) {
+    width: auto;
+  }
 }
 
 .goals-item__link {
   display: flex;
-  width: 134px;
   height: 24px;
+  flex-grow: 0;
   align-items: center;
+
+  // РАзобраться с Width
+  width: 168px;
+
 
   font-family: $seccond-font;
   font-size: 16px;
@@ -47,11 +108,23 @@
 
   text-transform: uppercase;
   color: #000000;
-
   text-decoration: none;
 
   background-image: url("../../icons/arrow-right.svg");
   background-position: center right 8px;
   background-size: 24px 12px;
   background-repeat: no-repeat;
+
+  @media ($viewport-tablet) {
+    // padding-right: 60px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media ($viewport-desktop) {
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

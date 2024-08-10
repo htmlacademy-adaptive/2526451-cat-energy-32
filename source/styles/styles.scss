@@ -5,18 +5,24 @@
 @import "./common/fonts.scss";
 @import "./common/global.scss";
 
+
 /* BLOCKS */
+@import "./blocks/page.scss";
+/* хеадер */
+@import "./blocks/main-header.scss";
 @import "./blocks/page-header.scss";
 @import "./blocks/navigation-list.scss";
 @import "./blocks/hero.scss";
 /* Цели */
 @import "./blocks/main-goals.scss";
 @import "./blocks/goals-item.scss";
-@import "./blocks/result.scss";
 /* Шаги */
+@import "./blocks/result.scss";
 @import "./blocks/step-list.scss";
+/* Живой пример */
 @import "./blocks/example.scss";
 @import "./blocks/expenses.scss";
+@import "./blocks/cats-slider.scss";
 /* Как нас найти */
 @import "./blocks/location-description.scss";
 /* Каталог */
@@ -25,13 +31,11 @@
 @import "./blocks/more-card.scss";
 /* Дополнительные товары */
 @import "./blocks/additional-products.scss";
-@import "./blocks/additional-product-cards-list.scss";
 @import "./blocks/additional-product.scss";
 @import "./blocks/promotion.scss";
 /* Подписаться */
 @import "./blocks/subscribe.scss";
-@import "./blocks/subscribe-form.scss";
 /* Футер */
 @import "./blocks/page-footer.scss";
+@import "./blocks/social-list.scss";
 @import "./blocks/copyright.scss";
-

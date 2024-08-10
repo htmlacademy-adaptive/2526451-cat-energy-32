@@ -1,3 +1,31 @@
 .page-footer {
   display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  justify-content: space-between;
+  min-height: 240px;
+
+  background-color: #f2f2f2;
+
+  @media ($viewport-tablet) {
+    flex-direction: row;
+
+    min-height: 147px;
+  }
+
+  @media ($viewport-desktop) {
+    min-height: 169px;
+  }
+}
+
+.page-footer__logo {
+  align-self: center;
+}
+
+.page-footer__social-list {
+  align-self: center;
+}
+
+.page-footer__copyright {
+  justify-content: space-between;
 }

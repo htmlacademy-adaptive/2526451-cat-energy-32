@@ -1,3 +1,21 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ($viewport-desktop) {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    // ?
+    padding-left: 190px;
+    // поиграть
+    height: 501px;
+  }
+}
+
 .hero__title {
   font-family: $seccond-font;
   font-size: 36px;
@@ -6,20 +24,45 @@
 
   color: #ffffff;
 
-  @media (min-width: 768px) {
+  @media ($viewport-tablet) {
     font-size: 60px;
     line-height: 60px;
     color: #000000;
     text-align: left;
   }
+
+  @media ($viewport-desktop) {
+    grid-column: 1/2;
+  }
 }
 
 .hero__description {
   font-family: $seccond-font;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 14px;
   text-transform: uppercase;
-  color: #000000;
+  text-align: center;
+
+  color: #ffffff;
+
+  @media ($viewport-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  @media ($viewport-desktop) {
+    grid-column: 1/2;
+  }
+}
+
+.hero__image-container {
+  @media ($viewport-desktop) {
+    position: absolute;
+    top: 0;
+    left: 557px;
+    bottom: 52px;
+  }
 }
 
 .hero__button {
