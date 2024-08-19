@@ -1,15 +1,16 @@
 .page-footer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  justify-content: space-between;
   min-height: 240px;
+  padding: 40px 20px;
+  justify-content: space-between;
+  align-items: center;
 
   background-color: #f2f2f2;
 
   @media ($viewport-tablet) {
     flex-direction: row;
-
     min-height: 147px;
   }
 
@@ -19,13 +20,26 @@
 }
 
 .page-footer__logo {
-  align-self: center;
+  padding-bottom: 20px;
+
+  @media ($viewport-tablet) {
+    padding: 0;
+  }
 }
 
 .page-footer__social-list {
-  align-self: center;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media ($viewport-tablet) {
+    border: none;
+  }
 }
 
 .page-footer__copyright {
-  justify-content: space-between;
+  padding-top: 20px;
+
+  @media ($viewport-tablet) {
+    padding: 0;
+  }
 }

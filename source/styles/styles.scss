@@ -4,17 +4,19 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
-
-
+/* Отдельные блоки */
+@import "./common/promotion-title.scss";
+@import "./common/button.scss";
 /* BLOCKS */
 @import "./blocks/page.scss";
 /* хеадер */
 @import "./blocks/main-header.scss";
 @import "./blocks/page-header.scss";
-@import "./blocks/navigation-list.scss";
+/* hero */
+@import "./blocks/navigation.scss";
 @import "./blocks/hero.scss";
 /* Цели */
-@import "./blocks/main-goals.scss";
+@import "./blocks/goals.scss";
 @import "./blocks/goals-item.scss";
 /* Шаги */
 @import "./blocks/result.scss";
@@ -22,7 +24,6 @@
 /* Живой пример */
 @import "./blocks/example.scss";
 @import "./blocks/expenses.scss";
-@import "./blocks/cats-slider.scss";
 /* Как нас найти */
 @import "./blocks/location-description.scss";
 /* Каталог */
@@ -35,6 +36,8 @@
 @import "./blocks/promotion.scss";
 /* Подписаться */
 @import "./blocks/subscribe.scss";
+/* Как добраться */
+@import "./blocks/location-guide.scss";
 /* Футер */
 @import "./blocks/page-footer.scss";
 @import "./blocks/social-list.scss";

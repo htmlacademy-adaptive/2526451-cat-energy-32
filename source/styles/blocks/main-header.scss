@@ -2,31 +2,21 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-
-  background-image: url("../../images/mobile-main-background@1x.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center top 65px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../images/mobile-main-background@2x.png");
-  }
+  box-sizing: border-box;
 
   @media ($viewport-tablet) {
     background-image: none;
   }
 
   @media ($viewport-desktop) {
-    // Посмотреть. в макете кот дальше. резина
-
-    height: 694px;
+    min-height: 694px;
     background-position: right 50%;
     background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../images/desktop-main-background@1x.jpg");
+  }
 
-    background-image: url("../../images/desktop-main-background@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/desktop-main-background@2x.png");
-    }
+  @media ($viewport-desktop) and (min-resolution: 2dppx) {
+    background-image: url("../../images/desktop-main-background@2x.jpg");
   }
 }

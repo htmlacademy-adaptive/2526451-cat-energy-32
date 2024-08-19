@@ -1,8 +1,25 @@
 .copyright {
-  text-decoration: none;
   display: flex;
-  align-items: center;
-  gap: 23px;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  @media ($viewport-tablet) {
+    width: unset;
+  }
+
+  & a {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+
+    @media ($viewport-tablet) {
+      gap: 23px;
+    }
+  }
 }
 
 .copyright__title {

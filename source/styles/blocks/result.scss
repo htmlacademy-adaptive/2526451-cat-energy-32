@@ -1,15 +1,24 @@
 .result {
-  padding: 0 30px;
+  padding: 20px 30px 49px;
 
   @media ($viewport-tablet) {
-    padding: 0 30px;
+    padding: 45px 105px 31px 30px;
   }
 
   @media ($viewport-desktop) {
-    padding: 0 110px 0 106px;
+    padding: 71px 110px 69px 106px;
   }
 }
 
 .result__title {
   @include basik-title();
+  margin-bottom: 40px;
+
+  @media ($viewport-tablet) {
+    margin-bottom: 37px;
+  }
+
+  @media ($viewport-tablet) {
+    margin-bottom: 32px;
+  }
 }

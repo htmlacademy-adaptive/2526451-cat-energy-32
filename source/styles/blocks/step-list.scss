@@ -6,51 +6,60 @@
   padding: 0;
 
   @media ($viewport-tablet) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    // justify-content: ;
-    gap: 37px 19.92vw;
-  }
-
-  @media ($viewport-desktop) {
-    display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    gap: unset;
   }
 }
 
 .step-list__item {
+  counter-increment: section;
   display: flex;
   gap: 20px;
   align-items: center;
+  position: relative;
 
   @media ($viewport-tablet) {
     flex-direction: column;
     align-items: start;
-    width: 29.95vw;
+    // разобраться
+    min-width: 230px;
+    max-width: 249px;
 
-    // ?
     min-height: 280px;
-
+    gap: 31px;
     box-sizing: border-box;
     padding-bottom: 57px;
     padding-top: 40px;
   }
+}
 
-  @media ($viewport-desktop) {
-    max-width: 17.36vw;
+.step-list__item::after {
+  content: counter(section);
+  position: absolute;
+  font-family: $seccond-font;
+  color: #f2f2f2;
+  display: none;
+
+  @media ($viewport-tablet) {
+    right: 0;
+    bottom: 13px;
+
+    display: block;
+
+    font-size: 280px;
+    line-height: 280px;
+
+    z-index: -1;
   }
 }
 
 
 .step-list__item::before {
   content: "";
-  flex-shrink: 0;
   display: block;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 
   background-color: #68b738;
   background-repeat: no-repeat;

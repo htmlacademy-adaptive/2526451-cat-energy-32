@@ -1,6 +1,18 @@
 .additional-products {
-  padding: 0 20px;
+  position: relative;
+  padding: 29px 20px 40px;
+  // Хммм
+  // Разобраться с паддингами от родителя...
+  @media ($viewport-tablet) {
+    padding: 0;
+  }
 
+  @media ($viewport-desktop) {
+    padding: 0;
+  }
+}
+
+.additional-products__title {
   @media ($viewport-tablet) {
     padding: 0 30px;
   }
@@ -10,21 +22,42 @@
   }
 }
 
-.additional-products__title {
-  @include catalog__title;
-}
 
 .additional-products__wrapper {
+  @media ($viewport-tablet) {
+    padding: 0 30px;
+  }
+
   @media ($viewport-desktop) {
+    padding: 0 110px;
     display: flex;
+    column-gap: 80px;
   }
 }
 
 .additional-products__cards-list {
   padding: 0;
+  padding-bottom: 35px;
   margin: 0;
   display: flex;
   flex-direction: column;
 
   list-style-type: none;
+
+  @media ($viewport-desktop) {
+    padding-bottom: 70px;
+  }
+
+  @media ($viewport-desktop) {
+    padding-bottom: 0;
+    flex-grow: 1;
+  }
+}
+
+.additional-products__cards-item {
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }

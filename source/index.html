@@ -28,51 +28,52 @@
           <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
         </picture>
       </a>
-      <nav class="main_nav">
-        <ul class="main_nav__navigation-list navigation-list">
-          <li class="navigation-list__item navigation-list__item--current"><a href="index.html">главная</a></li>
-          <li class="navigation-list__item"><a href="catalog.html">каталог продукции</a></li>
-          <li class="navigation-list__item"><a href="#">подбор программы</a></li>
+
+      <nav class="page-header_nav  page-header_nav--state-open navigation">
+        <ul class="navigation_list">
+          <li class="navigation__item navigation__item--current"><a href="index.html">главная</a></li>
+          <li class="navigation__item"><a href="catalog.html">каталог продукции</a></li>
+          <li class="navigation__item"><a href="#">подбор программы</a></li>
         </ul>
       </nav>
 
-      <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">кнопка меню</span></button>
+      <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
     </div>
     <!-- сексция хедер?.... -->
+    <!-- попоробовать маргин топ -->
     <section class="hero">
       <h1 class="hero__title">Функциональное<br> питание для котов</h1>
       <p class="hero__description">Занялся собой? Займись котом!</p>
       <div class="hero__image-container">
         <picture>
-          <source type="image/png" media="(min-width:1200px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
+          <source type="image/png" media="(min-width:1300px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
           <source type="image/jpg" media="(min-width:768px)" srcset="images/index-can-tablet@1x.jpg 1x, images/index-can-tablet@2x.jpg 2x" width="709" height="609">
           <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка еды для котов" width="280" height="270">
         </picture>
       </div>
       <!-- button или ссылка -->
-      <button class="hero__button" type="button">подобрать программу</button>
+      <a class="hero__button button" href="#">подобрать программу</a>
     </section>
   </header>
 
-  <main class="main-page">
+  <main class=" main-page">
 
-    <section class="main-goals">
-
+    <section class="goals">
       <h2 class="visually-hidden">Цели</h2>
 
-      <div class="goals-item goals-item--sitting-cat">
+      <article class="goals-item goals-item--sitting-cat">
         <h3 class="goals-item__title">похудение</h3>
         <p class="goals-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="goals-item__link" href="#">каталог slim</a>
-      </div>
+      </article>
 
-      <div class="goals-item goals-item--walking-cat">
+      <article class="goals-item goals-item--walking-cat">
         <h3 class="goals-item__title">набор массы</h3>
         <p class="goals-item__description">Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!</p>
         <a class="goals-item__link" href="#">каталог pro</a>
-      </div>
+      </article>
     </section>
 
     <section class="result">
@@ -95,7 +96,6 @@
     </section>
 
     <section class="example">
-
       <h2 class="example__title">Живой пример</h2>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой
         обычный корм на Cat Energy Slim. Отличный результат
@@ -114,9 +114,9 @@
         </dl>
       </div>
 
-      <div class="example__expenses expenses">
-        <span class="expenses__title">Затраты на питание:</span>
-        <span class="expenses__price">15 000 РУБ.</span>
+      <div class="example__expenses">
+        <span class="example__price-title">Затраты на питание:</span>
+        <span class="example__price">15 000 РУБ.</span>
       </div>
 
       <div class="example__cats cats-slider">
@@ -134,19 +134,22 @@
         </div>
       </div>
     </section>
-
+    <!-- Карта -->
     <section class="location-guide">
+
       <h2 class="visually-hidden">Как нас найти.</h2>
       <div class="location-guide__container location-description">
-        <h3 class="location-description__title">приглашаем к сотрудничеству дилеров!</h3>
-        <address class="location-description__adress">ул. Большая
+        <h3 class="location-description__title">приглашаем<br> к сотрудничеству<br> дилеров!</h3>
+        <address class="location-description__adress">ул. Большая<br>
           Конюшенная, д. 19/8
-          Санкт-Петербург</address>
+          <p>Санкт-Петербург</p>
+        </address>
       </div>
+      <iframe class="location-guide__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c15b2719cf6c87a53bac78b83a6611f39cd136930090096c461a02b241e6fe5&amp;source=constructor"></iframe>
     </section>
   </main>
-  <!-- Футер -->
 
+  <!-- Футер -->
   <footer class="page-footer">
     <img class="page-footer__logo logo" src="images/desktop-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
 
@@ -176,13 +179,16 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__copyright copyright" href="#" title="Сайт HTML Academy">
-      <span class="copyright__title">HTML Academy</span>
-      <span class="visually-hidden">Логотип HTML Academy.</span>
-      <svg width="27" height="34">
-        <use class="copyright__logo" href="images/academy-logo.svg#html-logo"></use>
-      </svg>
-    </a>
+
+    <div class="page-footer__copyright copyright">
+      <a href="#" title="Сайт HTML Academy">
+        <span class="copyright__title">HTML Academy</span>
+        <span class="visually-hidden">Логотип HTML Academy.</span>
+        <svg width="27" height="34">
+          <use class="copyright__logo" href="images/academy-logo.svg#html-logo"></use>
+        </svg>
+      </a>
+    </div>
   </footer>
 </body>
 

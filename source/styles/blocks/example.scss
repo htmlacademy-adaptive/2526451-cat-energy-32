@@ -1,43 +1,64 @@
 .example {
+  box-sizing: border-box;
   background-color: #eaeaea;
-  padding: 0 20px;
+  padding: 25px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media ($viewport-tablet) {
-    padding: 0 30px;
+    padding: 45px 30px 101px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto-fill);
 
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 30%, #f2f2f2 30% 100%);
+    background-image: linear-gradient(to bottom, transparent 57.26%, #eaeaea 57.26% 100%);
+    border-top: 1px solid #e6e6e6;
   }
 
   @media ($viewport-desktop) {
+    border-top: none;
     grid-template-columns: 436px 1fr;
 
     grid-template-rows: repeat(4, 1fr);
     padding: 0 110px;
     // подобрать
-    background-image: linear-gradient(to bottom, transparent 30%, #f2f2f2 30% 100%);
+    background-image: linear-gradient(to bottom, transparent 22.74%, #f2f2f2 22.74% 100%);
   }
 }
 
 .example__title {
   @include basik-title();
+  margin: 0;
+  min-height: 80px;
+  align-self: flex-start;
 
   @media ($viewport-tablet) {
     grid-column: 1/-1;
+    // Переменная титл разобраться
+    min-height: 120px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media ($viewport-desktop) {
+    min-height: 136px;
     grid-row: 1/2;
     grid-column: 1/2;
   }
 }
 
 .example__description {
-  @media ($viewport-tablet) {
+  margin: 0;
+  min-height: 128px;
+  align-self: flex-start;
 
+  @media ($viewport-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+
+    min-height: 127px;
     grid-column: 1/-1;
   }
 
@@ -48,7 +69,12 @@
 }
 
 .example__result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(280px, 87.5vw, 47.79vw);
+
   @media ($viewport-tablet) {
+    width: 366px;
     grid-column: 1/2;
   }
 
@@ -58,12 +84,92 @@
   }
 }
 
+.example__result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  color: #000000;
+
+  & dt {
+
+    font-family: $seccond-font;
+    padding: 14px 0 18px;
+    box-sizing: border-box;
+    min-width: 124px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    outline: 1px solid #cdcdcd;
+    border-radius: 3px;
+
+
+    @media ($viewport-tablet) {
+
+      font-size: 30px;
+      line-height: 37px;
+
+      min-width: 162px;
+    }
+  }
+
+  & dd {
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -9px;
+    padding: 0 15px;
+    width: 87px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+
+    background-color: #eaeaea;
+
+    @media ($viewport-tablet) {
+      width: unset;
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 0 9px;
+
+      background-color: #ffffff;
+    }
+
+    @media ($viewport-desktop) {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
 .example__expenses {
+  font-family: $seccond-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+
+  color: #000000;
+  align-self: center;
+
   @media ($viewport-tablet) {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
     grid-column: 2/3;
   }
 
   @media ($viewport-desktop) {
+    // ?
+    padding-right: 39px;
+
+    width: 366px;
+    flex-direction: row;
+    justify-content: space-between;
     grid-row: 4/5;
     grid-column: 1/2;
   }

@@ -7,44 +7,13 @@
     font-display: swap;
   }
 }
-
-@mixin basik-button() {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-
-  border: none;
-  background-color: #68b738;
-  color: #ffffff;
-  cursor: pointer;
-}
-
+// тоже разобраться
 @mixin basik-title() {
+  margin: 0;
+
   font-family: $seccond-font;
   font-size: 36px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
-}
-
-@mixin catalog__title {
-  font-family: $seccond-font;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
-
-  @media ($viewport-tablet) {
-    font-size: 32px;
-    line-height: 32px;
-  }
-
-  @media ($viewport-desktop) {
-    font-size: 40px;
-    line-height: 40px;
-  }
 }

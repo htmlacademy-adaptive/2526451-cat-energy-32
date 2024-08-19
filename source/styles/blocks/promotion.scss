@@ -1,28 +1,85 @@
 .promotion {
-  display: block;
-  padding: 187px 61px 43px 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 59px 61px 43px 58px;
   width: 100%;
   height: 290px;
   box-sizing: border-box;
+  justify-content: space-between;
+
 
   background-color: #68b738;
 
-  background-image:
-    url("../../icons/icon_gift.svg"),
-    url("../../images/mobile-promotion-background@2x.png");
-
+  background-image: url("../../images/mobile-promotion-background@1x.png");
   background-repeat: no-repeat;
-  background-position: center 59px, 0;
-  background-size:
-    78px 80px,
-    100%;
+  background-size: 100%;
+
+  @media ($viewport-tablet) {
+    flex-direction: row;
+    padding: 71px 125px 69px 77px;
+
+    height: 200px;
+    background-image: url("../../images/tablet-promotion-background@1x.jpg");
+  }
+
+  @media ($viewport-desktop) {
+    flex-direction: column;
+
+    padding: 56px 42px 43px;
+    height: 288px;
+    width: 245px;
+    background-image: url("../../images/desktop-promotion-background@1x.jpg");
+  }
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/mobile-promotion-background@2x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) and ($viewport-tablet) {
+    background-image: url("../../images/tablet-promotion-background@2x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) and ($viewport-desktop) {
+    background-image: url("../../images/desktop-promotion-background@2x.png");
+  }
 }
+
+.promotion::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+
+  background-image: url("../../icons/icon_gift.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media ($viewport-tablet) {
+    width: 80px;
+    height: 82.5px;
+  }
+}
+
 
 .promotion__description {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-align: center;
+  margin: 0;
 
-  align-self: end;
+
+  @media ($viewport-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 161px;
+    align-self: center;
+  }
+
+  @media ($viewport-desktop) {
+    flex-direction: column;
+    align-self: flex-end;
+  }
 }

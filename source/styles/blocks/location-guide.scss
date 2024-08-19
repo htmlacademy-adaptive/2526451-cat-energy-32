@@ -1,0 +1,14 @@
+.location-guide {
+  position: relative;
+}
+
+.location-guide__map {
+  display: block;
+  min-height: 362px;
+  border: none;
+  width: 100%;
+
+  @media ($viewport-tablet) {
+    min-height: 400px;
+  }
+}

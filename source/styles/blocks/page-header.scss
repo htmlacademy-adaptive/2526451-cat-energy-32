@@ -1,19 +1,58 @@
 .page-header {
   display: flex;
-  width: 100%;
+  // width: 100%;
   justify-content: space-between;
   box-sizing: border-box;
+  align-items: center;
+  min-height: 65px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+
+  @media ($viewport-tablet) {
+    padding: 25px 34px 0 30px;
+    min-height: 75px;
+  }
 
   @media ($viewport-desktop) {
-    padding: 0 100px;
+    min-height: 114px;
+    padding: 55px 110px 0;
   }
+}
+// Обрати внимание
+.page-header_nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+
+  @media ($viewport-tablet) {
+    width: unset;
+    position: static;
+  }
+}
+
+.page-header_nav--state-open {
+  display: block;
 }
 
 .page-header__logo-link {
   display: flex;
   align-items: center;
-
   text-decoration: none;
+
+  @media ($viewport-tablet) {
+    gap: 13px;
+  }
+}
+
+.page-header__logo-text {
+  @media (max-width: 500px) {
+    position: absolute;
+    left: 50%;
+    top: 23px;
+    transform: translate(-50%);
+  }
 }
 
 .page-header__nav-toggle {
@@ -25,12 +64,20 @@
   border: none;
 
   background-color: #ffffff;
-  background-image: url("../../icons/mobile-toggle.svg");
-  background-position: 4px 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 
   cursor: pointer;
 
   @media ($viewport-tablet) {
     display: none;
   }
+}
+
+.page-header__nav-toggle--burger {
+  background-image: url("../../icons/mobile-toggle.svg");
+}
+
+.page-header__nav-toggle--cross {
+  background-image: url("../../icons/cross.svg");
 }
