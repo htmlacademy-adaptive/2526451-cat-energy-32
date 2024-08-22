@@ -22,4 +22,20 @@
   align-items: center;
 
   padding: 12px;
+  color: #666666;
+  fill: currentColor;
+  transition: color linear 200ms;
+
+  &:focus-visible {
+    outline: none;
+    color: $hover-event-color;
+  }
+
+  &:hover {
+    color: $hover-event-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

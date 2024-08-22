@@ -50,6 +50,7 @@
 
   &--current {
     @media ($viewport-tablet) {
+      pointer-events: none;
       border-bottom: 2px solid #68b738;
     }
 
@@ -88,6 +89,9 @@
 
 
   @media ($viewport-tablet) {
+    @include events-opacity(0.6,0.3);
+
+
     font-size: 18px;
     line-height: 24px;
   }

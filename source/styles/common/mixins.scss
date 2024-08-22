@@ -17,3 +17,42 @@
   text-transform: uppercase;
   color: #000000;
 }
+
+@mixin events-opacity ($hov,$act) {
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover {
+    opacity: $hov;
+    transition: opacity linear 50ms;
+  }
+
+  &:active {
+    opacity: $act;
+  }
+}
+// названия
+@mixin image-slider-toggle-event($hover-color,$active-opacity) {
+  &:hover {
+    color: $hover-color;
+    border: 2px solid $hover-color;
+
+    & ~ .slider-toggle__stick {
+      &::before,
+      &::after {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  &:active {
+    cursor: grabbing;
+    opacity: $active-opacity;
+
+    & ~ span {
+      opacity: $active-opacity;
+    }
+  }
+}

@@ -29,9 +29,9 @@
         </picture>
       </a>
 
-      <nav class="page-header_nav  page-header_nav--state-open navigation">
+      <nav class="page-header_nav page-header_nav--state-open navigation">
         <ul class="navigation_list">
-          <li class="navigation__item navigation__item--current"><a href="index.html">главная</a></li>
+          <li class="navigation__item navigation__item--current"><a href="index.html" tabindex="-1">главная</a></li>
           <li class="navigation__item"><a href="catalog.html">каталог продукции</a></li>
           <li class="navigation__item"><a href="#">подбор программы</a></li>
         </ul>
@@ -51,7 +51,6 @@
           <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка еды для котов" width="280" height="270">
         </picture>
       </div>
-      <!-- button или ссылка -->
       <a class="hero__button button" href="#">подобрать программу</a>
     </section>
   </header>
@@ -120,17 +119,28 @@
       </div>
 
       <div class="example__cats cats-slider">
-        <div class="cats-slider__wrapper">
-          <picture>
-            <source type="image/png" media="(min-width:768px)" srcset="images/skinny-cat@1x.png 1x, images/skinny-cat@2x.png 2x" width="560" height="512">
-            <img class="cats-slider_image" src="images/mobile-skinny-cat@1x.png" srcset="images/mobile-skinny-cat@2x.png 2x" alt="Худой кот." width="280" height="256">
-          </picture>
-        </div>
-        <div class="cats-slider__wrapper">
-          <picture>
-            <source type="image/png" media="(min-width:1200px)" srcset="images/fat-cat@1x.png 1x, images/fat-cat@2x.png 2x" width="560" height="512">
-            <img class="cats-slider_image visually-hidden" src="images/mobile-fat-cat@1x.png" srcset="images/mobile-fat-cat@2x.png 2x" alt="Толстый кот." width="280" height="256">
-          </picture>
+        <div class="cats-slider__wrapper" id="slider">
+          <div class="cats-slider__cat-before">
+            <picture>
+              <source type="image/png" media="(min-width:1200px)" srcset="images/fat-cat@1x.png 1x, images/fat-cat@2x.png 2x" width="560" height="512">
+              <img class="cats-slider__image" src="images/mobile-fat-cat@1x.png" srcset="images/mobile-fat-cat@2x.png 2x" alt="Толстый кот." width="280" height="256">
+            </picture>
+          </div>
+          <div class="cats-slider__slider slider-toggle">
+            <button class="slider-toggle__button" type="button">
+              <span class="visually-hidden">Слайдер до/после</span>
+              <svg width="24" height="18">
+                <use class="slider-toggle__slider-icon" href="images/toggle-icon.svg#toggle"></use>
+              </svg>
+            </button>
+            <span class="slider-toggle__stick"></span>
+          </div>
+          <div class="cats-slider__cat-after">
+            <picture>
+              <source type="image/png" media="(min-width:1200px)" srcset="images/skinny-cat@1x.png 1x, images/skinny-cat@2x.png 2x" width="560" height="512">
+              <img class="cats-slider__image cats-slider__image--scale-overflow" src="images/mobile-skinny-cat@1x.png" srcset="images/mobile-skinny-cat@2x.png 2x" alt="Худой кот." width="280" height="256">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -151,8 +161,13 @@
 
   <!-- Футер -->
   <footer class="page-footer">
-    <img class="page-footer__logo logo" src="images/desktop-text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="128" height="24">
-
+    <a class="page-footer__logo-link" tabindex="-1" href="index.html">
+      <svg class="page-footer__logo" width="128" height="24">
+        <use class="block" href="images/footer-text-logo.svg#textlogo">
+        </use>
+      </svg>
+      <span class="visually-hidden">Текстовый логотип Кэт Энерджи</span>
+    </a>
     <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a class="social-list__link vkontakte" href="#" title="нашва страница ВКонтекте">
@@ -181,7 +196,7 @@
     </ul>
 
     <div class="page-footer__copyright copyright">
-      <a href="#" title="Сайт HTML Academy">
+      <a class="copyright__link" href="#" title="Сайт HTML Academy">
         <span class="copyright__title">HTML Academy</span>
         <span class="visually-hidden">Логотип HTML Academy.</span>
         <svg width="27" height="34">

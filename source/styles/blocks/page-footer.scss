@@ -19,11 +19,24 @@
   }
 }
 
-.page-footer__logo {
+.page-footer__logo-link {
   padding-bottom: 20px;
 
   @media ($viewport-tablet) {
     padding: 0;
+  }
+}
+
+.page-footer__logo {
+  color: #111111;
+  fill: currentColor;
+
+  &:hover {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
   }
 }
 

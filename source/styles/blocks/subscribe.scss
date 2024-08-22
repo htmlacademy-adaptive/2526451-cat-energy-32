@@ -10,10 +10,6 @@
   }
 }
 
-// .subscribe__title {
-//   @include catalog__title;
-// }
-
 .subscribe__form {
   display: flex;
   flex-flow: column wrap;
@@ -34,6 +30,7 @@
   font-family: $seccond-font;
   font-size: 16px;
   line-height: 24px;
+
   color: #000000;
 
   @media ($viewport-tablet) {
@@ -52,7 +49,23 @@
   font-family: $seccond-font;
   font-size: 20px;
   line-height: 30px;
-  border: 1px solid #cdcdcd;
+  outline-offset: -1px;
+  outline: 1px solid #e7e7e7;
+  border: none;
+
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px solid #444444;
+  }
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:invalid {
+    outline-offset: -2px;
+    outline: 2px solid #ff8282;
+  }
 }
 
 .subscribe__input::placeholder {
@@ -60,9 +73,9 @@
   text-transform: uppercase;
   color: #444444;
 }
-// Invalid поиграться
+
 .subscribe__input:placeholder-shown {
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #e7e7e7;
 }
 
 .subscribe__button {

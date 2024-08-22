@@ -95,4 +95,17 @@
   border: none;
   width: 100%;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    background-color: #ebebeb;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

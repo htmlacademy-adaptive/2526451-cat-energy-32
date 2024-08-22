@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // высота?
+  min-height: 659px;
+
 
   @media ($viewport-tablet) {
     padding: 45px 30px 101px;
