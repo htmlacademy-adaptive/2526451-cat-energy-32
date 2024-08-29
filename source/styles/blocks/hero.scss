@@ -6,7 +6,7 @@
   padding: 27px 20px 0;
 
   background-image:
-    url("../../images/mobile-main-background@1x.png"),
+    url("../../images/mobile-main-background@1x.webp"),
     linear-gradient(to bottom, #62a63a 302px, transparent 302px 100%);
   background-size: 320px 302px, 100% 100%;
   background-position: center top 0;
@@ -14,7 +14,7 @@
   // Линеар отдельно
   @media (min-resolution: 2dppx) {
     background-image:
-      url("../../images/mobile-main-background@2x.png"),
+      url("../../images/mobile-main-background@2x.webp"),
       linear-gradient(to bottom, #62a63a 302px, transparent 302px 100%);
   }
 

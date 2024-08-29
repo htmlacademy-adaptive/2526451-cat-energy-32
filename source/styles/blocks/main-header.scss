@@ -14,13 +14,13 @@
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-image:
-      url("../../images/desktop-main-background@1x.jpg"),
+      url("../../images/desktop-main-background@1x.webp"),
       linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 
   @media ($viewport-desktop) and (min-resolution: 2dppx) {
     background-image:
-      url("../../images/desktop-main-background@1x.jpg"),
+      url("../../images/desktop-main-background@1x.webp"),
       linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 }

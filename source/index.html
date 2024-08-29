@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="apple-touch-icon" href="favicons/apple.webp">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
+  <script src="scripts/image-slider.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -46,9 +49,9 @@
       <p class="hero__description">Занялся собой? Займись котом!</p>
       <div class="hero__image-container">
         <picture>
-          <source type="image/png" media="(min-width:1300px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
-          <source type="image/jpg" media="(min-width:768px)" srcset="images/index-can-tablet@1x.jpg 1x, images/index-can-tablet@2x.jpg 2x" width="709" height="609">
-          <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка еды для котов" width="280" height="270">
+          <source type="image/webp" media="(min-width:1300px)" srcset="images/index-can@1x.webp 1x, images/index-can@2x.webp 2x" width="552" height="499">
+          <source type="image/webp" media="(min-width:768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x" width="709" height="609">
+          <img class="hero__image" src="images/index-can-mobile@1x.webp" srcset="images/index-can-mobile@2x.webp 2x" alt="Упаковка еды для котов" width="280" height="270">
         </picture>
       </div>
       <a class="hero__button button" href="#">подобрать программу</a>
@@ -125,8 +128,8 @@
           <div class="cats-slider__wrapper">
             <div class="cats-slider__cat-before">
               <picture>
-                <source type="image/png" media="(min-width:768px)" srcset="images/fat-cat@1x.png 1x, images/fat-cat@2x.png 2x" width="560" height="512">
-                <img class="cats-slider__image" src="images/mobile-fat-cat@1x.png" srcset="images/mobile-fat-cat@2x.png 2x" alt="Толстый кот." width="280" height="256">
+                <source type="image/webp" media="(min-width:768px)" srcset="images/fat-cat@1x.webp 1x, images/fat-cat@2x.webp 2x" width="560" height="512">
+                <img class="cats-slider__image" src="images/mobile-fat-cat@1x.webp" srcset="images/mobile-fat-cat@2x.webp 2x" alt="Толстый кот." width="280" height="256">
               </picture>
             </div>
             <div class="cats-slider__slider slider-toggle">
@@ -140,8 +143,8 @@
             </div>
             <div class="cats-slider__cat-after">
               <picture>
-                <source type="image/png" media="(min-width:768px)" srcset="images/skinny-cat@1x.png 1x, images/skinny-cat@2x.png 2x" width="560" height="512">
-                <img class="cats-slider__image cats-slider__image--scale-overflow" src="images/mobile-skinny-cat@1x.png" srcset="images/mobile-skinny-cat@2x.png 2x" alt="Худой кот." width="280" height="256">
+                <source type="image/webp" media="(min-width:768px)" srcset="images/skinny-cat@1x.webp 1x, images/skinny-cat@2x.webp 2x" width="560" height="512">
+                <img class="cats-slider__image cats-slider__image--scale-overflow" src="images/mobile-skinny-cat@1x.webp" srcset="images/mobile-skinny-cat@2x.webp 2x" alt="Худой кот." width="280" height="256">
               </picture>
             </div>
           </div>
@@ -178,7 +181,7 @@
           <a class="social-list__link vkontakte" href="#" title="наша страница ВКонтекте">
             <span class="visually-hidden">Вконтакте.</span>
             <svg width="27" height="17">
-              <use href="images/social-icons/VK.svg#vk"></use>
+              <use href="images/social-icons/vk.svg#vk"></use>
             </svg>
           </a>
         </li>

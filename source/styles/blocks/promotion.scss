@@ -10,7 +10,7 @@
 
 
   background-color: #68b738;
-  background-image: url("../../images/mobile-promotion-background@1x.png");
+  background-image: url("../../images/mobile-promotion-background@1x.webp");
   background-repeat: no-repeat;
   background-size: 100%;
 
@@ -19,7 +19,7 @@
     height: 200px;
     padding: 71px 125px 69px 77px;
 
-    background-image: url("../../images/tablet-promotion-background@1x.jpg");
+    background-image: url("../../images/tablet-promotion-background@1x.webp");
   }
 
   @media ($viewport-desktop) {
@@ -28,20 +28,20 @@
     height: 288px;
     width: 245px;
 
-    background-image: url("../../images/desktop-promotion-background@1x.jpg");
+    background-image: url("../../images/desktop-promotion-background@1x.webp");
   }
 
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../images/mobile-promotion-background@2x.jpg");
+    background-image: url("../../images/mobile-promotion-background@2x.webp");
   }
 
   @media (min-resolution: 2dppx) and ($viewport-tablet) {
-    background-image: url("../../images/tablet-promotion-background@2x.jpg");
+    background-image: url("../../images/tablet-promotion-background@2x.webp");
   }
 
   @media (min-resolution: 2dppx) and ($viewport-desktop) {
-    background-image: url("../../images/desktop-promotion-background@2x.jpg");
+    background-image: url("../../images/desktop-promotion-background@2x.webp");
   }
 }
 
