@@ -1,35 +1,43 @@
 .additional-products {
   position: relative;
-  padding: 29px 20px 40px;
-  // Хммм
-  // Разобраться с паддингами от родителя...
+
   @media ($viewport-tablet) {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
   }
 
-  @media ($viewport-desktop) {
-    padding: 0;
-  }
+  // @media ($viewport-desktop) {
+  //   padding: 0;
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 80px;
+  // }
 }
+
 
 .additional-products__title {
-  @media ($viewport-tablet) {
-    padding: 0 30px;
-  }
+  padding: 25px 0 34px;
 
-  @media ($viewport-desktop) {
-    padding: 0 110px;
+  @media ($viewport-tablet) {
+    padding: 0;
   }
 }
 
-
 .additional-products__wrapper {
+  padding: 0 20px;
+
   @media ($viewport-tablet) {
     padding: 0 30px;
   }
 
   @media ($viewport-desktop) {
-    padding: 0 110px;
+    align-self: center;
+    width: clamp(1220px, 100vw, $max-viewport-width);
+    box-sizing: border-box;
+
+    padding: 0;
     display: flex;
     column-gap: 80px;
   }
@@ -44,8 +52,8 @@
 
   list-style-type: none;
 
-  @media ($viewport-desktop) {
-    padding-bottom: 70px;
+  @media ($viewport-tablet) {
+    padding: 0 0 69px;
   }
 
   @media ($viewport-desktop) {
@@ -55,9 +63,20 @@
 }
 
 .additional-products__cards-item {
+  box-sizing: border-box;
   border-top: 1px solid #cdcdcd;
+  min-height: 129px;
+
+  @media ($viewport-tablet) {
+    // min-height: 139px;
+  }
+
+  @media ($viewport-desktop) {
+    min-height: unset;
+  }
 
   &:last-child {
     border-bottom: 1px solid #cdcdcd;
   }
 }
+

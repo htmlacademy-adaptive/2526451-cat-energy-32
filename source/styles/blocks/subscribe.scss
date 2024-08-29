@@ -1,12 +1,18 @@
 .subscribe {
-  padding: 15px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 40px 0;
 
   @media ($viewport-tablet) {
-    padding: 80px 30px;
+    padding: 80px 0;
+    row-gap: 66px;
   }
 
   @media ($viewport-desktop) {
-    padding: 96px 110px 104px;
+    row-gap: 72px;
+
+    padding: 96px 0 104px;
   }
 }
 
@@ -14,11 +20,21 @@
   display: flex;
   flex-flow: column wrap;
   row-gap: 16px;
+  padding: 0 20px;
+
 
   @media ($viewport-tablet) {
     flex-flow: row wrap;
     row-gap: 24px;
-    padding: 0 38px;
+    // padding: 0 38px;
+    padding: 0 68px;
+  }
+
+  @media ($viewport-desktop) {
+    padding: 0 335px;
+    row-gap: 0;
+    max-width: 752px;
+    align-self: center;
   }
 }
 
@@ -30,6 +46,7 @@
   font-family: $seccond-font;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
 
   color: #000000;
 
@@ -81,6 +98,12 @@
 .subscribe__button {
   flex-grow: 1;
   height: 56px;
+
+  @media ($viewport-tablet) {
+    max-width: 256px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 
   @media ($viewport-desktop) {
     max-width: 256px;

@@ -1,5 +1,5 @@
 .main-header {
-  flex-shrink: 0;
+  // flex-shrink: 0;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -13,10 +13,14 @@
     background-position: right 50%;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-image: url("../../images/desktop-main-background@1x.jpg");
+    background-image:
+      url("../../images/desktop-main-background@1x.jpg"),
+      linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 
   @media ($viewport-desktop) and (min-resolution: 2dppx) {
-    background-image: url("../../images/desktop-main-background@2x.jpg");
+    background-image:
+      url("../../images/desktop-main-background@1x.jpg"),
+      linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 }

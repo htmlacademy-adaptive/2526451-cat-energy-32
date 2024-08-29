@@ -1,24 +1,35 @@
 .result {
-  padding: 20px 30px 49px;
+  padding: 10px 20px 49px;
 
   @media ($viewport-tablet) {
-    padding: 45px 105px 31px 30px;
+    padding: 45px 105px 47px 30px;
   }
 
   @media ($viewport-desktop) {
-    padding: 71px 110px 69px 106px;
+    box-sizing: border-box;
+    align-self: center;
+    width: clamp(1220px, 100vw, $max-viewport-width);
+
+    padding: 0 0 69px;
   }
 }
 
 .result__title {
-  @include basik-title();
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+  font-family: $seccond-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
 
   @media ($viewport-tablet) {
-    margin-bottom: 37px;
+    padding-bottom: 32px;
+
+    font-size: 60px;
+    line-height: 60px;
   }
 
-  @media ($viewport-tablet) {
-    margin-bottom: 32px;
+  @media ($viewport-desktop) {
+    // margin-bottom: 0;
   }
 }

@@ -21,20 +21,20 @@
   @media ($viewport-tablet) {
     align-items: start;
     min-height: 875px;
-    padding: 65px 30px 0 130px;
+    padding: 65px 30px 0 120px;
     background-image: none;
   }
 
   @media ($viewport-desktop) {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: start;
-    // ?
-    padding-left: 13.2%;
-    // поиграть
+    padding: 110px 30px 0 80px;
     min-height: 501px;
+    // ?
+    width: clamp(800px, 1220px, $max-viewport-width);
+    align-self: center;
   }
 }
 
@@ -57,6 +57,10 @@
     color: #000000;
     text-align: left;
   }
+  //   @media ($viewport-tablet) {
+  //     margin:0;
+  // padding: ;
+  //   }
 }
 
 .hero__description {
@@ -83,18 +87,20 @@
   margin-bottom: 3px;
 
   @media ($viewport-tablet) {
-    margin-bottom: 0;
     position: absolute;
     left: 30px;
     top: 341px;
     z-index: -1;
+    margin-bottom: 0;
   }
 
   @media ($viewport-desktop) {
-    top: 0;
-    left: 557px;
-    bottom: 52px;
+    top: 29px;
+    // left: 557px;
+    // bottom: 52px;
+    right: 221px;
     z-index: 1;
+    left: unset;
   }
 }
 

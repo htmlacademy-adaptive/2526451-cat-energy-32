@@ -6,19 +6,20 @@
 
   @media ($viewport-tablet) {
     border: none;
-    padding: 0 30px 40px;
+    padding: 0 30px 42px;
   }
 
   @media ($viewport-desktop) {
-    padding: 0 110px 40px;
+    align-self: center;
+    width: clamp(768px, 100vw, $max-viewport-width);
+    box-sizing: border-box;
+    padding: 0 0 40px;
   }
 }
 
 .catalog__title {
   margin: 0;
-  // переделать на блок
-  margin-bottom: 41px;
-
+  padding: 0 20px 40px;
   font-family: $seccond-font;
   font-size: 36px;
   line-height: 36px;
@@ -26,15 +27,17 @@
   color: #000000;
 
   @media ($viewport-tablet) {
-    // time
-    margin: 0;
     display: flex;
     align-items: flex-end;
-    min-height: 129px;
-
+    min-height: 124px;
+    padding: 0;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media ($viewport-desktop) {
+    min-height: 134px;
   }
 }
 
@@ -44,18 +47,19 @@
   list-style-type: none;
 
   @media ($viewport-tablet) {
-    padding: 87px 0 32px;
+    padding: 85px 0 32px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
 
   @media ($viewport-desktop) {
-    padding: 87px 0 31px;
+    padding: 84px 0 31px;
 
     grid-template-columns: repeat(4, 1fr);
+    // настроить
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 63px 40px;
+    gap: 63px 80px;
   }
 }
 

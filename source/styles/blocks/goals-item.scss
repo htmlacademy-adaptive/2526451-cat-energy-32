@@ -1,11 +1,13 @@
 .goals-item {
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
-  width: 100%;
+  // width: 100%;
   padding: 30px 33px 18px 20px;
-  box-sizing: border-box;
+
   row-gap: 15px;
-  // flex-shrink: 0;
+
   background-color: #f2f2f2;
 
   @media ($viewport-tablet) {
@@ -15,6 +17,7 @@
 
   @media ($viewport-desktop) {
     padding: 77px 63px 55px 52px;
+    width: 50%;
   }
 }
 
@@ -42,7 +45,7 @@
   background-size: 67px 50px;
 
   @media ($viewport-tablet) {
-    background-position: center right 29px;
+    background-position: right 29px top 95px;
     background-size: 268px 200px;
   }
 
@@ -81,17 +84,19 @@
 }
 
 .goals-item__description {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   min-height: clamp(113px, 28.12vw, 372px);
   width: clamp(227px, 70.94vw, 340px);
 
-  border-bottom: 1px solid#D9D9D9;
   font-size: clamp(14px, 4.38vw, 16px);
   line-height: clamp(18px, 5.6vw, 24px);
 
+  border-bottom: 1px solid#D9D9D9;
+
   @media ($viewport-tablet) {
-    width: 54.23%;
+    // width: 54.23%;
     min-height: 144px;
 
     font-size: 16px;
