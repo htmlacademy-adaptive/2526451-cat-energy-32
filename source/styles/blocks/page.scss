@@ -1,0 +1,36 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.page__body {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page__body--main-background {
+  @media ($viewport-desktop) {
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 694px;
+    background-image:
+      url("../../images/desktop-main-background@1x.jpg"),
+      linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+
+    @media ($viewport-desktop) and (min-resolution: 2dppx) {
+      background-image:
+        url("../../images/desktop-main-background@1x.jpg"),
+        linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+    }
+  }
+}

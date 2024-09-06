@@ -1,0 +1,43 @@
+.social-list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media ($viewport-tablet) {
+    height: unset;
+    width: unset;
+  }
+}
+
+
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  width: 28px;
+  height: 22px;
+  padding: 12px;
+
+  fill: currentColor;
+
+  transition: color linear 200ms;
+
+  &:focus-visible {
+    outline: none;
+    color: $hover-event-color;
+  }
+
+  &:hover {
+    color: $hover-event-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

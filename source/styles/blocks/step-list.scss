@@ -1,0 +1,136 @@
+.step-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+
+  @media ($viewport-tablet) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 37px;
+  }
+
+  @media ($viewport-desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 74px;
+  }
+}
+
+.step-list__item {
+  counter-increment: section;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+
+  @media ($viewport-tablet) {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px;
+    padding-bottom: 57px;
+    padding-top: 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.step-list__item p {
+  margin: 0;
+}
+
+.step-list__item::after {
+  content: counter(section);
+  position: absolute;
+
+  font-family: $seccond-font;
+  color: #f2f2f2;
+  display: none;
+
+  @media ($viewport-tablet) {
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    font-size: 280px;
+    line-height: 280px;
+
+    z-index: -1;
+  }
+}
+
+
+.step-list__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media ($viewport-tablet) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.step-list__item--leaf {
+  @media ($viewport-tablet) {
+    width: 230px;
+  }
+
+  &::before {
+    background-image: url("../../icons/leaf.svg");
+    background-size: 30px 32px;
+  }
+}
+
+.step-list__item--jar {
+  @media ($viewport-tablet) {
+    width: 246px;
+  }
+
+  &::before {
+    background-image: url("../../icons/jar.svg");
+    background-size: 29px 28.5px;
+  }
+}
+
+.step-list__item--cutlery {
+  @media ($viewport-tablet) {
+    width: 249px;
+  }
+
+  &::before {
+    background-image: url("../../icons/cutlery.svg");
+    background-size: 25px 30px;
+  }
+}
+
+.step-list__item--clock {
+  @media ($viewport-tablet) {
+    width: 249px;
+  }
+
+  &::before {
+    background-image: url("../../icons/clock.svg");
+    background-size: 26px 31px;
+  }
+}
+
+.step-list__item--clock br {
+  display: none;
+
+  @media ($viewport-tablet) {
+    display: unset;
+  }
+}

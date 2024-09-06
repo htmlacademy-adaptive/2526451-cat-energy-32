@@ -1,0 +1,67 @@
+.slider-toggle__button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 50%;
+
+  color: #666666;
+  fill: currentColor;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+  z-index: 2;
+
+  @include image-slider-toggle-event ($hover-event-color, 0.6);
+}
+
+
+.slider-toggle__stick {
+  position: absolute;
+  left: 50%;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  height: 100%;
+
+  z-index: 1;
+
+  transform: translateX(-50%);
+
+
+  &::after,
+  &::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+
+    background-color: #666666;
+    border-radius: 5px;
+  }
+}
+
+.on-touch {
+  color: $hover-event-color;
+  border-color: $hover-event-color;
+  opacity: 0.6;
+
+  & ~ .slider-toggle__stick {
+    &::before,
+    &::after {
+      background-color: $hover-event-color;
+      opacity: 0.6;
+    }
+  }
+}

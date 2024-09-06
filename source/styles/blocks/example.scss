@@ -1,0 +1,222 @@
+.example {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #eaeaea;
+
+  @media ($viewport-tablet) {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 57.26%, #eaeaea 57.26% 100%);
+  }
+
+  @media ($viewport-desktop) {
+    background-image: linear-gradient(to bottom, transparent 136px, #f2f2f2 22.74% 100%);
+  }
+}
+
+.example__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  min-height: 659px;
+  padding: 25px 20px 40px;
+
+  @media ($viewport-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content) 1fr;
+    min-height: 1081px;
+    padding: 44px 30px 101px;
+    row-gap: 40px;
+
+    border-top: 1px solid #e6e6e6;
+  }
+
+  @media ($viewport-desktop) {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: 433px 1fr;
+    align-self: center;
+    gap: 37px 224px;
+
+    width: clamp(1220px, 100vw, $max-viewport-width);
+    min-height: unset;
+    padding: 0;
+    padding-bottom: 57px;
+
+    border-top: none;
+  }
+}
+
+.example__title {
+  margin: 0;
+  padding-bottom: 20px;
+
+  font-family: $seccond-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+
+  align-self: flex-start;
+
+  @media ($viewport-tablet) {
+    grid-column: 1/-1;
+    padding-bottom: 20px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media ($viewport-desktop) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    min-height: 149px;
+  }
+}
+
+.example__description {
+  align-self: flex-start;
+  margin: 0;
+
+  @media ($viewport-tablet) {
+    grid-column: 1/-1;
+    min-height: 87px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media ($viewport-desktop) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    min-height: 129px;
+  }
+}
+
+.example__result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(280px, 87.5vw, 47.79vw);
+
+  @media ($viewport-tablet) {
+    width: 366px;
+    grid-column: 1/2;
+  }
+
+  @media ($viewport-desktop) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    min-height: 83px;
+  }
+}
+
+.example__result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  color: #000000;
+}
+
+.example__result-item dt {
+  box-sizing: border-box;
+  min-width: 124px;
+  padding: 14px 0 17px;
+
+  font-family: $seccond-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+
+  outline: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+
+  @media ($viewport-tablet) {
+    padding: 14px 0 20px;
+    font-size: 30px;
+    line-height: 37px;
+
+    min-width: 162px;
+  }
+}
+
+.example__result-item dd {
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: -9px;
+  padding: 0 15px;
+  width: 87px;
+
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+
+  background-color: #eaeaea;
+
+  @media ($viewport-tablet) {
+    width: unset;
+    padding: 0 9px;
+
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+
+    background-color: #ffffff;
+  }
+
+  @media ($viewport-desktop) {
+    background-color: #f2f2f2;
+  }
+}
+
+.example__expenses {
+  box-sizing: border-box;
+  align-self: center;
+
+  font-family: $seccond-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media ($viewport-tablet) {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    row-gap: 9px;
+    padding-top: 11px;
+    padding-bottom: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media ($viewport-desktop) {
+    // ?
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 39px;
+    width: 366px;
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
+
+.example__cats {
+  @media ($viewport-tablet) {
+    place-self: end center;
+    grid-column: 1/-1;
+  }
+
+  @media ($viewport-desktop) {
+    place-self: start;
+
+    grid-row: 1/-1;
+    grid-column: 2/3;
+  }
+}

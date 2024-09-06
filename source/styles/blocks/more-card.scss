@@ -1,0 +1,116 @@
+.more-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 25px 20px 24px;
+
+  list-style: none;
+
+  @media ($viewport-tablet) {
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 50px 37px 40px;
+
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.more-card li:nth-child(1) {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: flex-end;
+
+  row-gap: 8px;
+  width: 78.21%;
+  min-height: 97px;
+
+  background-image: url("../../icons/plus.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center top 0;
+
+  @media ($viewport-tablet) {
+    // оптимизировать
+    row-gap: 23px;
+    width: 170px;
+    min-height: 217px;
+
+    background-size: 60px 60px;
+  }
+
+  @media ($viewport-desktop) {
+    // оптимизировать
+    min-height: 210px;
+    row-gap: 26px;
+
+    background-size: 60px 60px;
+  }
+}
+
+.more-card__title {
+  font-family: $seccond-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111111;
+  // padding: 0 18px;
+
+  @media ($viewport-tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.more-card__description {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  @media ($viewport-tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.more-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+
+  font-family: $seccond-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #444444;
+  background-color: #f2f2f2;
+  border: none;
+
+  transition: background-color 300ms linear;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    background-color: #ebebeb;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

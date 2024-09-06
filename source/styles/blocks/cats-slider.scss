@@ -1,0 +1,35 @@
+.cats-slider__wrapper {
+  position: relative;
+
+  box-sizing: border-box;
+  display: flex;
+  min-height: 256px;
+  min-width: 280px;
+
+  @media ($viewport-tablet) {
+    min-width: 560px;
+    min-height: 512px;
+  }
+}
+
+.cats-slider__cat-before,
+.cats-slider__cat-after {
+  position: relative;
+
+  width: 50%;
+  overflow: hidden;
+}
+
+.cats-slider__image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.cats-slider__image--scale-overflow {
+  left: unset;
+  right: 0;
+}

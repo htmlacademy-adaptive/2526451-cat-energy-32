@@ -1,0 +1,31 @@
+.result {
+  padding: 10px 20px 49px;
+
+  @media ($viewport-tablet) {
+    padding: 45px 105px 47px 30px;
+  }
+
+  @media ($viewport-desktop) {
+    box-sizing: border-box;
+    align-self: center;
+    width: clamp(1220px, 100vw, $max-viewport-width);
+    padding: 0 0 69px;
+  }
+}
+
+.result__title {
+  padding-bottom: 40px;
+  margin: 0;
+  font-family: $seccond-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+
+  @media ($viewport-tablet) {
+    padding-bottom: 32px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
