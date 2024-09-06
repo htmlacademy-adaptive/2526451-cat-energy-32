@@ -18,19 +18,15 @@
 }
 
 .stick-title__container {
-  // border: 1px solid blackl;
   display: flex;
-
 
   @media ($viewport-tablet) {
     box-sizing: border-box;
-    // align-self: center;
     padding: 0 30px;
     min-height: 32px;
   }
 
   @media ($viewport-desktop) {
-    // min-height: 40px;
     width: clamp(768px, 100vw, calc($max-viewport-width + 80px));
     box-sizing: border-box;
     place-self: center center;
@@ -45,7 +41,6 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  // min-height: 86px;
   margin: 0;
   padding: 0 40px 0 20px;
 
