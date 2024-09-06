@@ -7,7 +7,6 @@ const imageAfter = slider.querySelector('.cats-slider__cat-after');
 toggle.onmousedown = function (event) {
   event.preventDefault();
   const shiftX = event.clientX - toggle.getBoundingClientRect().left;
-  // получим кординаты маусдаун на круге...
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
@@ -22,7 +21,7 @@ toggle.onmousedown = function (event) {
       newLeft = slider.offsetWidth;
     }
 
-    newLeft = (newLeft / slider.getBoundingClientRect().width) * 100;
+    newLeft = Math.round((newLeft / slider.getBoundingClientRect().width) * 100);
 
     toggle.style.left = `${newLeft}%`;
     stick.style.left = `${newLeft}%`;
