@@ -15,6 +15,7 @@ import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
+import autoprefixer from 'autoprefixer';
 
 const { src, dest, watch, series, parallel } = gulp;
 const sass = gulpSass(dartSass);
@@ -31,6 +32,12 @@ const PATHS_TO_STATIC = [
   `!${PATH_TO_SOURCE}**/README.md`,
 ];
 let isDevelopment = true;
+
+export const css = () => gulp.src('./build/styles/*.css')
+  .pipe(postcss([
+    autoprefixer(),
+  ]))
+  .pipe(gulp.dest('./build/styles'));
 
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)

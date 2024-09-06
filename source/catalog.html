@@ -3,23 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Навание проекта</title>
+  <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.webp">
   <link rel="manifest" href="manifest.webmanifest">
-  <script src="scripts/index.js" defer></script>
+  <script src="scripts/navigation-drop-down.js" defer></script>
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo-link" href="index.html">
 
+    <a class="page-header__logo-link" href="index.html">
       <picture>
-        <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-logo.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width:1300px)" srcset="images/desktop-logo.svg" width="70" height="59">
         <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
         <img class="page-header__logo-image logo-image" src="images/mobile-logo.svg" alt="Логотип Кэт Энерджи" width="33" height="38">
       </picture>
@@ -29,8 +29,8 @@
       </picture>
     </a>
 
-    <nav class="page-header_nav  page-header_nav--state-open navigation">
-      <ul class="navigation_list navigation_list--catalog-font-color">
+    <nav class="page-header__nav  page-header__nav--state-open navigation">
+      <ul class="navigation__list navigation__list--catalog-font-color">
         <li class="navigation__item"><a href="index.html">главная</a></li>
         <li class="navigation__item navigation__item--current"><a href="catalog.html" tabindex="-1">каталог продукции</a></li>
         <li class="navigation__item"><a href="#">подбор программы</a></li>
@@ -39,13 +39,13 @@
 
     <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
   </header>
-  <main class="page__main">
 
-    <section class="catalog">
+  <main class="page__main">
+    <section class="catalog" data-test="catalog">
       <h1 class="catalog__title">Каталог продукции</h1>
       <!-- Карточки товаров -->
-      <ul class="catalog__product-cards-list">
-        <li class="catalog__product-cards-item">
+      <ul class="catalog__cards-list">
+        <li class="catalog__cards-item">
           <!-- 1 -->
           <ul class="product-card">
             <li>
@@ -77,7 +77,7 @@
           </ul>
 
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 2 -->
           <ul class="product-card">
             <li>
@@ -111,7 +111,7 @@
           </ul>
 
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 3 -->
           <ul class="product-card">
             <li>
@@ -142,7 +142,7 @@
             </li>
           </ul>
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 4 -->
           <ul class="product-card">
             <li>
@@ -175,7 +175,7 @@
           </ul>
 
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 5 -->
           <ul class="product-card">
             <li>
@@ -206,7 +206,7 @@
           </ul>
 
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 6 -->
           <ul class="product-card">
             <li>
@@ -219,7 +219,7 @@
               </a>
             </li>
             <li>
-              <h2 class="product-card__title"><a class="product-card__title-link" href="#">Cat Energy
+              <h2 class="product-card__title"><a class="product-card__title-link" href="#" tabindex="-1">Cat Energy
                   SLIM
                   1000 г</a>
               </h2>
@@ -239,7 +239,7 @@
           </ul>
 
         </li>
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
           <!-- 7 -->
           <ul class="product-card">
             <li>
@@ -252,7 +252,7 @@
               </a>
             </li>
             <li>
-              <h2 class="product-card__title"><a class="product-card__title-link" href="#">Cat Energy SLIM 500 г</a>
+              <h2 class="product-card__title"><a class="product-card__title-link" href="#" tabindex="-1">Cat Energy SLIM 500 г</a>
               </h2>
             </li>
             <li class="product-card__weight">
@@ -270,8 +270,9 @@
           </ul>
 
         </li>
+
         <!-- Показать все -->
-        <li class="catalog__product-cards-item">
+        <li class="catalog__cards-item">
 
           <ul class="more-card">
             <li>
@@ -279,7 +280,7 @@
               <span class="more-card__description">На самом деле вкусов гораздо больше!</span>
             </li>
             <li>
-              <button class="more-card__button" type="button">показать все</button>
+              <a class="more-card__button" href="#">показать все</a>
             </li>
           </ul>
 
@@ -296,8 +297,8 @@
       </div>
       <div class="additional-products__wrapper">
 
-        <ul class="additional-products__cards-list">
-          <li class="additional-products__cards-item">
+        <ul class="additional-products__list">
+          <li class="additional-products__item">
 
             <ul class="additional-product-card">
               <li class="additional-product-card__item">
@@ -313,7 +314,7 @@
             </ul>
 
           </li>
-          <li class="additional-products__cards-item">
+          <li class="additional-products__item">
 
             <ul class="additional-product-card">
               <li class="additional-product-card__item">
@@ -329,7 +330,7 @@
             </ul>
 
           </li>
-          <li class="additional-products__cards-item">
+          <li class="additional-products__item">
 
             <ul class="additional-product-card">
               <li class="additional-product-card__item">
@@ -345,8 +346,7 @@
             </ul>
 
           </li>
-          <!-- Переименовать по бэм кард итем отдельно -->
-          <li class="additional-products__cards-item">
+          <li class="additional-products__item">
 
             <ul class="additional-product-card">
               <li class="additional-product-card__item">
@@ -374,7 +374,7 @@
     </section>
 
     <!-- Подписаться -->
-    <section class="subscribe">
+    <section class="subscribe" data-test="subscribe">
 
       <div class="stick-title">
         <div class="stick-title__container">
@@ -405,7 +405,7 @@
   </main>
 
   <!-- Футер -->
-  <footer class="page__footer footer">
+  <footer class="page__footer footer" data-test="footer">
     <div class="footer__wrapper">
       <a class="footer__logo-link" tabindex="-1" href="index.html">
         <svg class="footer__logo" width="128" height="24">
@@ -418,7 +418,7 @@
         <li class="social-list__item">
           <a class="social-list__link vkontakte" href="#" title="наша страница ВКонтекте">
             <span class="visually-hidden">Вконтакте.</span>
-            <svg width="27" height="17">
+            <svg width="27" height="18">
               <use href="images/social-icons/vk.svg#vk"></use>
             </svg>
           </a>
@@ -442,7 +442,7 @@
       </ul>
 
       <div class="footer__copyright copyright">
-        <a class="copyright__link" href="#" title="Сайт HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Сайт HTML Academy">
           <span class="copyright__title">HTML Academy</span>
           <span class="visually-hidden">Логотип HTML Academy.</span>
           <svg width="27" height="34">

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Навание проекта</title>
+  <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
@@ -12,90 +12,90 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <script src="scripts/index.js" defer></script>
-  <script src="scripts/image-slider.js" defer></script>
+  <script src="scripts/navigation-drop-down.js" defer></script>
 </head>
 
-<body class="page__body">
-  <!-- бэкграунд?.... -->
-  <header class="main-header">
-    <div class="page-header">
-      <a class="page-header__logo-link" href="index.html">
-        <picture>
-          <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-logo.svg" width="70" height="59">
-          <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
-          <img class="page-header__logo-image logo-image" src="images/mobile-logo.svg" alt="Логотип Кэт Энерджи" width="33" height="38">
-        </picture>
-        <picture>
-          <source type="image/svg+xml" media="(min-width:1200px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
-          <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
-        </picture>
-      </a>
+<body class="page__body page__body--main-background">
+  <header class="page-header" data-test="header">
+    <a class="page-header__logo-link" href="index.html">
+      <picture>
+        <source type="image/svg+xml" media="(min-width:1300px)" srcset="images/desktop-logo.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width:768px)" srcset="images/tablet-logo.svg" width="60" height="50">
+        <img class="page-header__logo-image logo-image" src="images/mobile-logo.svg" alt="Логотип Кэт Энерджи" width="33" height="38">
+      </picture>
+      <picture>
+        <source type="image/svg+xml" media="(min-width:1300px)" srcset="images/desktop-text-logo.svg" width="118" height="21">
+        <img class="page-header__logo-text logo-text" src="images/text-logo.svg" alt="Текстовый логотип Кэт Энерджи" width="101" height="18">
+      </picture>
+    </a>
 
-      <nav class="page-header_nav page-header_nav--state-open navigation">
-        <ul class="navigation_list">
-          <li class="navigation__item navigation__item--current"><a href="index.html" tabindex="-1">главная</a></li>
-          <li class="navigation__item"><a href="catalog.html">каталог продукции</a></li>
-          <li class="navigation__item"><a href="#">подбор программы</a></li>
-        </ul>
-      </nav>
+    <nav class="page-header__nav page-header__nav--state-open navigation" data-test="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__item--current"><a href="index.html" tabindex="-1">главная</a></li>
+        <li class="navigation__item"><a href="catalog.html">каталог продукции</a></li>
+        <li class="navigation__item"><a href="#">подбор программы</a></li>
+      </ul>
+    </nav>
 
-      <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
-    </div>
-    <!-- сексция хедер?.... -->
-    <!-- попоробовать маргин топ -->
+    <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
+  </header>
+
+  <main class="page__main">
     <section class="hero">
       <h1 class="hero__title">Функциональное<br> питание для котов</h1>
       <p class="hero__description">Занялся собой? Займись котом!</p>
       <div class="hero__image-container">
         <picture>
-          <source type="image/webp" media="(min-width:1300px)" srcset="images/index-can@1x.webp 1x, images/index-can@2x.webp 2x" width="552" height="499">
+          <source type="image/webp" media="(min-width:900px)" srcset="images/index-can@1x.webp 1x, images/index-can@2x.webp 2x" width="552" height="499">
           <source type="image/webp" media="(min-width:768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x" width="709" height="609">
           <img class="hero__image" src="images/index-can-mobile@1x.webp" srcset="images/index-can-mobile@2x.webp 2x" alt="Упаковка еды для котов" width="280" height="270">
         </picture>
       </div>
       <a class="hero__button button" href="#">подобрать программу</a>
     </section>
-  </header>
 
-  <main class="page__main">
-
-    <section class="goals">
+    <section class="goals" data-test="goals">
       <h2 class="visually-hidden">Цели</h2>
-      <!-- перебрать по БЭМ -->
-      <article class="goals-item goals-item--sitting-cat">
-        <h3 class="goals-item__title">похудение</h3>
-        <p class="goals-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a class="goals-item__link" href="#">каталог slim</a>
+
+      <article class="goals__card goals__card--sitting-cat">
+        <h3 class="goals__card-title">похудение</h3>
+        <p class="goals__card-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <a class="goals__card-link" href="#">каталог slim</a>
       </article>
-      <!-- артикл? -->
-      <article class="goals-item goals-item--walking-cat">
-        <h3 class="goals-item__title">набор массы</h3>
-        <p class="goals-item__description">Заработать авторитет среди дворовых котов и даже собак?
+
+      <article class="goals__card goals__card--walking-cat">
+        <h3 class="goals__card-title">набор массы</h3>
+        <p class="goals__card-description">Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!</p>
-        <a class="goals-item__link" href="#">каталог pro</a>
+        <a class="goals__card-link" href="#">каталог pro</a>
       </article>
     </section>
 
     <section class="result">
       <h2 class="result__title">Как это работает</h2>
 
-      <ol class="result__steps-list step-list">
+      <ol class="result__steps step-list">
         <li class="step-list__item step-list__item--leaf">
           Функциональное питание
           содержит только полезные
           питательные вещества.
         </li>
-        <li class="step-list__item step-list__item--jar">Выпускается в виде порошка,
+        <li class="step-list__item step-list__item--jar">
+          Выпускается в виде порошка,
           который нужно лишь залить
-          кипятком и готово.</li>
-        <li class="step-list__item step-list__item--cutlery">Замените один-два приема
+          кипятком и готово.
+        </li>
+        <li class="step-list__item step-list__item--cutlery">
+          Замените один-два приема
           обычной еды на наше
-          функциональное питание.</li>
-        <li class="step-list__item step-list__item--clock">Уже через месяц наслаждайтесь
-          изменениями к лучшему<br>
-          вашего питомца!</li>
+          функциональное питание.
+        </li>
+        <li class="step-list__item step-list__item--clock">
+          Уже через месяц наслаждайтесь
+          изменениями к лучшему <br>
+          вашего питомца!
+        </li>
       </ol>
     </section>
 
@@ -107,7 +107,6 @@
           без изнуряющих тренировок! При этом он не менял своих
           привычек и по-прежнему спит по 16 часов в день.</p>
 
-        <!-- подумать -->
         <div class="example__result-wrapper">
           <dl class="example__result-item">
             <dt>5 КГ</dt>
@@ -139,7 +138,7 @@
                   <use class="slider-toggle__slider-icon" href="images/toggle-icon.svg#toggle"></use>
                 </svg>
               </button>
-              <span class="slider-toggle__stick"></span>
+              <div class="slider-toggle__stick"></div>
             </div>
             <div class="cats-slider__cat-after">
               <picture>
@@ -152,7 +151,7 @@
       </div>
     </section>
     <!-- Карта -->
-    <section class="location-guide">
+    <section class="location-guide" data-test="map">
 
       <h2 class="visually-hidden">Как нас найти.</h2>
       <div class="location-guide__container location-description">
@@ -167,7 +166,7 @@
   </main>
 
   <!-- Футер -->
-  <footer class="page__footer footer">
+  <footer class="page__footer footer" data-test="footer">
     <div class="footer__wrapper">
       <a class="footer__logo-link" tabindex="-1" href="index.html">
         <svg class="footer__logo" width="128" height="24">
@@ -180,7 +179,7 @@
         <li class="social-list__item">
           <a class="social-list__link vkontakte" href="#" title="наша страница ВКонтекте">
             <span class="visually-hidden">Вконтакте.</span>
-            <svg width="27" height="17">
+            <svg width="27" height="18">
               <use href="images/social-icons/vk.svg#vk"></use>
             </svg>
           </a>
@@ -204,7 +203,7 @@
       </ul>
 
       <div class="footer__copyright copyright">
-        <a class="copyright__link" href="#" title="Сайт HTML Academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Сайт HTML Academy">
           <span class="copyright__title">HTML Academy</span>
           <span class="visually-hidden">Логотип HTML Academy.</span>
           <svg width="27" height="34">
@@ -214,6 +213,8 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/image-slider-mouse.js" defer></script>
+  <script src="scripts/image-slider-touch.js" defer></script>
 </body>
 
 </html>

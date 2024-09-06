@@ -4,103 +4,112 @@
   }
 }
 
-.navigation_list {
+.navigation__list {
   flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+
   background-color: #ffffff;
 
   @media ($viewport-tablet) {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-
+    justify-content: end;
     margin: 0;
-    padding: 0;
-    gap: 33.5px;
-
+    padding-top: 2px;
+    gap: 20px 15px;
     background-color: transparent;
   }
 
   @media ($viewport-desktop) {
     color: #ffffff;
+    padding-top: 5px;
   }
 }
 
 .navigation__item {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 67px;
-  box-sizing: border-box;
+
   border-top: 1px solid #e6e6e6;
+
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+
+    @media ($viewport-tablet) {
+      border: none;
+    }
+  }
 
   @media ($viewport-tablet) {
     box-sizing: content-box;
     border: none;
-    height: 36px;
-  }
-
-  @media ($viewport-desktop) {
-    height: 40px;
-    // color: #ffffff;
-  }
-
-  &--current {
-    @media ($viewport-tablet) {
-      pointer-events: none;
-      border-bottom: 2px solid #68b738;
-    }
-
-    @media ($viewport-desktop) {
-      border-bottom: 2px solid #ffffff;
-    }
+    height: unset;
   }
 }
 
-.navigation_list--catalog-font-color {
+.navigation__list--catalog-font-color {
   @media ($viewport-tablet) {
     color: #000000;
   }
 }
 
-.navigation_list--catalog-font-color .navigation__item--current {
-  @media ($viewport-desktop) {
-    border-bottom: 2px solid #68b738;
-  }
-}
-
-
 .navigation__item a {
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
 
-  text-decoration: none;
   font-family: $seccond-font;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: inherit;
+  text-decoration: none;
+
+  color: #000000;
 
 
   @media ($viewport-tablet) {
     @include events-opacity(0.6,0.3);
-
 
     font-size: 18px;
     line-height: 24px;
   }
 
   @media ($viewport-desktop) {
-    // color: #ffffff;
-    color: inherit;
-
     font-size: 20px;
     line-height: 30px;
+
+    color: inherit;
+  }
+}
+
+.navigation__item--current a {
+  @media ($viewport-tablet) {
+    text-decoration: underline;
+    text-decoration-color: #68b738;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+
+    pointer-events: none;
+  }
+
+  @media ($viewport-desktop) {
+    text-decoration-color: #ffffff;
+    text-underline-offset: 11px;
+  }
+}
+
+.navigation__list--catalog-font-color .navigation__item--current a {
+  @media ($viewport-desktop) {
+    text-decoration-color: #68b738;
   }
 }

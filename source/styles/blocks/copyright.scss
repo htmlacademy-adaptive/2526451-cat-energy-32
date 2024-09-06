@@ -7,18 +7,18 @@
   @media ($viewport-tablet) {
     width: unset;
   }
+}
 
-  & a {
-    display: flex;
-    flex-direction: row;
+.copyright a {
+  display: flex;
+  flex-direction: row;
 
-    justify-content: space-between;
-    text-decoration: none;
-    align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
 
-    @media ($viewport-tablet) {
-      gap: 23px;
-    }
+  @media ($viewport-tablet) {
+    gap: 23px;
   }
 }
 
@@ -49,5 +49,6 @@
 .copyright__logo {
   color: #666666;
   fill: currentColor;
+
   transition: color linear 100ms;
 }

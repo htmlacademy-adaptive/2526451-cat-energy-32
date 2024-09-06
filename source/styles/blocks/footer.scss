@@ -1,18 +1,18 @@
 .footer {
-  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
+
+  background-color: #f2f2f2;
 }
 
 .footer__wrapper {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
-  align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
+  align-items: center;
   min-height: 240px;
+  padding: 40px 20px;
 
   background-color: #f2f2f2;
 
@@ -31,7 +31,7 @@
 
 .footer__logo-link {
   padding-bottom: 15px;
-
+  // ?
   @media ($viewport-tablet) {
     padding: 10px;
     margin-right: 35px;
@@ -53,6 +53,7 @@
 
 .footer__social-list {
   width: 100%;
+
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 

@@ -5,19 +5,17 @@
 @import "./common/fonts.scss";
 @import "./common/global.scss";
 /* Отдельные блоки */
-@import "./common/stick-title.scss";
-@import "./common/button.scss";
-/* BLOCKS */
+@import "./blocks/stick-title.scss";
+@import "./blocks/button.scss";
+/* page */
 @import "./blocks/page.scss";
 /* хеадер */
-@import "./blocks/main-header.scss";
 @import "./blocks/page-header.scss";
-/* hero */
 @import "./blocks/navigation.scss";
+/* hero */
 @import "./blocks/hero.scss";
 /* Цели */
 @import "./blocks/goals.scss";
-@import "./blocks/goals-item.scss";
 /* Шаги */
 @import "./blocks/result.scss";
 @import "./blocks/step-list.scss";
