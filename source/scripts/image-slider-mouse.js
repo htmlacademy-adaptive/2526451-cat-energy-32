@@ -34,3 +34,6 @@ toggle.onmousedown = function (event) {
     document.removeEventListener('mousemove', onMouseMove);
   }
 };
+toggle.ondragstart = function () {
+  return false;
+};
