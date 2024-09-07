@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="favicons/apple.webp">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/navigation-drop-down.js" defer></script>
+  <script src="scripts/map-hide.js" defer></script>
+
 </head>
 
 <body class="page__body">
@@ -29,15 +31,15 @@
       </picture>
     </a>
 
-    <nav class="page-header__nav  page-header__nav--state-open navigation">
+    <nav class="page-header__nav page-header__nav--state-open page-header__nav--state-open-position navigation">
       <ul class="navigation__list navigation__list--catalog-font-color">
-        <li class="navigation__item"><a href="index.html">главная</a></li>
-        <li class="navigation__item navigation__item--current"><a href="catalog.html" tabindex="-1">каталог продукции</a></li>
-        <li class="navigation__item"><a href="#">подбор программы</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="index.html">главная</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--current" tabindex="-1" href="catalog.html">каталог продукции</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="#">подбор программы</a></li>
       </ul>
     </nav>
 
-    <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
+    <button class="page-header__nav-toggle page-header__nav-toggle--burger page-header__nav-toggle--state-open" type="button"><span class="visually-hidden">кнопка меню</span></button>
   </header>
 
   <main class="page__main">
@@ -400,6 +402,11 @@
           <p>Санкт-Петербург</p>
         </address>
       </div>
+      <picture>
+        <source type="image/webp" media="(min-width:1440px)" srcset="images/maps/desktop-map@1x.webp 1x, images/maps/desktop-map@2x.webp 2x" width="1440" height="400">
+        <source type="image/webp" media="(min-width:768px)" srcset="images/maps/tablet-map@1x.webp 1x, images/maps/tablet-map@2x.webp 2x" width="768" height="400">
+        <img class="location-guide__map-image" src="images/maps/mobile-map@1x.webp" srcset="images/maps/mobile-map@2x.webp 2x" alt="Карта как нас найти" width="320" height="362" loading="lazy">
+      </picture>
       <iframe class="location-guide__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c15b2719cf6c87a53bac78b83a6611f39cd136930090096c461a02b241e6fe5&amp;source=constructor"></iframe>
     </section>
   </main>

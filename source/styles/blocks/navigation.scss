@@ -59,7 +59,7 @@
   }
 }
 
-.navigation__item a {
+.navigation__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@
   }
 }
 
-.navigation__item--current a {
+.navigation__link--current {
   @media ($viewport-tablet) {
     text-decoration: underline;
     text-decoration-color: #68b738;
@@ -101,13 +101,12 @@
   }
 
   @media ($viewport-desktop) {
-    text-decoration-color: #ffffff;
     text-underline-offset: 11px;
   }
 }
 
-.navigation__list--catalog-font-color .navigation__item--current a {
+.navigation__link--current[href="index.html"] {
   @media ($viewport-desktop) {
-    text-decoration-color: #68b738;
+    text-decoration-color: #ffffff;
   }
 }
