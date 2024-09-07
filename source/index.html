@@ -13,6 +13,7 @@
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script src="scripts/navigation-drop-down.js" defer></script>
+  <script src="scripts/map-hide.js" defer></script>
 </head>
 
 <body class="page__body page__body--main-background">
@@ -29,15 +30,15 @@
       </picture>
     </a>
 
-    <nav class="page-header__nav page-header__nav--state-open navigation" data-test="navigation">
+    <nav class="page-header__nav page-header__nav--state-open page-header__nav--state-open-position navigation">
       <ul class="navigation__list">
-        <li class="navigation__item navigation__item--current"><a href="index.html" tabindex="-1">главная</a></li>
-        <li class="navigation__item"><a href="catalog.html">каталог продукции</a></li>
-        <li class="navigation__item"><a href="#">подбор программы</a></li>
+        <li class="navigation__item"><a class="navigation__link navigation__link--current" href="index.html" tabindex="-1">главная</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="catalog.html">каталог продукции</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="#">подбор программы</a></li>
       </ul>
     </nav>
 
-    <button class="page-header__nav-toggle page-header__nav-toggle--cross" type="button"><span class="visually-hidden">кнопка меню</span></button>
+    <button class="page-header__nav-toggle page-header__nav-toggle--burger page-header__nav-toggle--state-open" type="button"><span class="visually-hidden">кнопка меню</span></button>
   </header>
 
   <main class="page__main">
@@ -60,7 +61,13 @@
       <article class="goals__card goals__card--sitting-cat">
         <h3 class="goals__card-title">похудение</h3>
         <p class="goals__card-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a class="goals__card-link" href="#">каталог slim</a>
+        <a class="goals__card-link" href="#">
+          <span class="goals__card-link-description">каталог slim</span>
+          <svg class="goals__card-svg-arrow" width="7" height="12">
+            <use href="images/arrow.svg#arrow"></use>
+          </svg>
+        </a>
+
       </article>
 
       <article class="goals__card goals__card--walking-cat">
@@ -68,7 +75,12 @@
         <p class="goals__card-description">Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!</p>
-        <a class="goals__card-link" href="#">каталог pro</a>
+        <a class="goals__card-link" href="#">
+          <span class="goals__card-link-description">каталог pro</span>
+          <svg class="goals__card-svg-arrow" width="7" height="12">
+            <use href="images/arrow.svg#arrow"></use>
+          </svg>
+        </a>
       </article>
     </section>
 
@@ -151,7 +163,7 @@
       </div>
     </section>
     <!-- Карта -->
-    <section class="location-guide" data-test="map">
+    <section class="location-guide">
 
       <h2 class="visually-hidden">Как нас найти.</h2>
       <div class="location-guide__container location-description">
@@ -161,6 +173,12 @@
           <p>Санкт-Петербург</p>
         </address>
       </div>
+      <picture>
+        <source type="image/webp" media="(min-width:1440px)" srcset="images/maps/desktop-map@1x.webp 1x, images/maps/desktop-map@2x.webp 2x" width="1440" height="400">
+        <source type="image/webp" media="(min-width:768px)" srcset="images/maps/tablet-map@1x.webp 1x, images/maps/tablet-map@2x.webp 2x" width="768" height="400">
+        <img class="location-guide__map-image" src="images/maps/mobile-map@1x.webp" srcset="images/maps/mobile-map@2x.webp 2x" alt="Карта как нас найти" width="320" height="362" loading="lazy">
+      </picture>
+
       <iframe class="location-guide__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c15b2719cf6c87a53bac78b83a6611f39cd136930090096c461a02b241e6fe5&amp;source=constructor"></iframe>
     </section>
   </main>
@@ -170,8 +188,7 @@
     <div class="footer__wrapper">
       <a class="footer__logo-link" tabindex="-1" href="index.html">
         <svg class="footer__logo" width="128" height="24">
-          <use href="images/footer-text-logo.svg#textlogo">
-          </use>
+          <use href="images/footer-text-logo.svg#textlogo"></use>
         </svg>
         <span class="visually-hidden">Текстовый логотип Кэт Энерджи</span>
       </a>

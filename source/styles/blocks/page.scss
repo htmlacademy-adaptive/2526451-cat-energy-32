@@ -26,11 +26,11 @@
     background-image:
       url("../../images/desktop-main-background@1x.jpg"),
       linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+  }
 
-    @media ($viewport-desktop) and (min-resolution: 2dppx) {
-      background-image:
-        url("../../images/desktop-main-background@1x.jpg"),
-        linear-gradient(to right, #ffffff 50%, #64a83b 50%);
-    }
+  @media (min-resolution: 2dppx) and ($viewport-desktop) {
+    background-image:
+      url("../../images/desktop-main-background@2x.jpg"),
+      linear-gradient(to right, #ffffff 50%, #64a83b 50%);
   }
 }

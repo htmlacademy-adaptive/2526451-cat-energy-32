@@ -1,9 +1,10 @@
 .location-guide {
   position: relative;
+  background-color: #f2f2f2;
 }
 
 .location-guide__map {
-  display: block;
+  display: none;
   min-height: 362px;
   border: none;
   width: 100%;
@@ -11,4 +12,13 @@
   @media ($viewport-tablet) {
     min-height: 400px;
   }
+}
+
+.location-guide__map-image--hide {
+  display: none;
+}
+
+.location-guide__map-image {
+  display: block;
+  margin: 0 auto;
 }
