@@ -152,9 +152,15 @@
 
 
   &:hover {
+    transition: all 50ms linear;
+
     &::before {
       width: 26px;
       right: 6px;
+    }
+
+    &.goals__card-link::after {
+      transform: translateX(0);
     }
   }
 
@@ -184,11 +190,11 @@
   transform: translateY(-1px);
 }
 
-.goals__card-svg-arrow {
-  transition: transform 50ms linear;
+.goals__card-link::after {
+  content: "";
+  transition: all 50ms linear;
+  width: 7px;
+  height: 12px;
+  background-image: url("../../images/arrow.svg");
   transform: translateX(-8px);
-}
-
-.goals__card-link:hover .goals__card-svg-arrow {
-  transform: translateX(0);
 }
