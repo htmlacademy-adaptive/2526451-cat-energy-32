@@ -7,22 +7,21 @@
 .form__button-container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
   gap: 9px;
+  padding: 0 20px;
 
   @media ($viewport-tablet) {
     padding: 0 70px;
     gap: 60px;
     flex-direction: row;
-    // justify-content: center;
   }
 
   @media ($viewport-desktop) {
-    padding: 0;
     width: clamp(768px, 100vw, $max-viewport-width);
-    align-self: center;
     justify-content: flex-start;
+    align-self: center;
     gap: 80px;
+    padding: 0;
   }
 }
 
@@ -31,6 +30,7 @@
   align-items: center;
   justify-content: center;
   min-height: 40px;
+
   line-height: 16px;
   color: #000000;
 
@@ -38,17 +38,14 @@
     font-size: 16px;
     line-height: 16px;
   }
-
-  // @media ($viewport-desktop) {
-  //   flex-grow: 1;
-  // }
 }
 
 .form__button {
   @media ($viewport-tablet) {
+    padding: 14px 65px;
+
     font-size: 20px;
     line-height: 26px;
-    padding: 14px 65px;
   }
 
   @media ($viewport-desktop) {

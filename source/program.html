@@ -54,13 +54,13 @@
             <legend class="visually-hidden">Поля ввода имя вес возраст</legend>
             <ul class="inputs__list">
               <li class="inputs__item"><label class="inputs__label" for="name-input">ИМЯ:*</label>
-                <input class="inputs__input-field input" type="text" name="name" id="name-input" required placeholder="БАРСИК" autocomplete="on">
+                <input class="inputs__input-field input" type="text" name="name" id="name-input" required value="БАРСИК" autocomplete="on">
               </li>
               <li class="inputs__item"><label class="inputs__label" for="weight-input">Вес (кг):*</label>
-                <input class="inputs__input-field input" type="number" name="weight" id="weight-input" required placeholder="7">
+                <input class="inputs__input-field input" type="number" name="weight" id="weight-input" required value="7">
               </li>
               <li class="inputs__item"><label class="inputs__label" for="age-input">Возраст (лет):</label>
-                <input class="inputs__input-field input" type="number" name="age" id="age-input" placeholder="7">
+                <input class="inputs__input-field input" type="number" name="age" id="age-input" value="7">
               </li>
             </ul>
           </fieldset>
@@ -86,7 +86,7 @@
         <section class="form__contacts contacts">
           <div class="stick-title">
             <div class="stick-title__container">
-              <h2 class="stick-title__text contacts__title">Контактные данные (владельца кота)</h2>
+              <h2 class="stick-title__text program-title">Контактные данные (владельца кота)</h2>
             </div>
           </div>
           <fieldset class="contacts__fieldset">
@@ -102,7 +102,7 @@
               </li>
               <li class="contacts__item">
                 <label class="contacts__label" for="tel">Телефон:*</label>
-                <input class="contacts__input input" placeholder="8 (960) 900-60-90" id="tel" name="phone-number" type="tel" required>
+                <input class="contacts__input input" placeholder="8 (960) 900-60-90" id="tel" name="phone-number" type="tel" required pattern="\+?[0-9\s\-\(\)]+">
                 <span class="visually-hidden">иконка почты.</span>
                 <svg class="contacts__svg-icon" width="20" height="20">
                   <use href="icons/stack.svg#phone-stroke"></use>
@@ -116,21 +116,22 @@
         <section class="form__comments comments">
           <div class="stick-title">
             <div class="stick-title__container">
-              <h2 class="stick-title__text contacts__title">Комментарий</h2>
+              <h2 class="stick-title__text program-title">Комментарий</h2>
             </div>
           </div>
           <div class="comments__text-area-container">
-            <textarea class="comments__text-area input" type="text-area" id="comments-text-area" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="comments__text-area input" id="comments-text-area" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </section>
 
         <section class="form__additionally additionally">
           <div class="stick-title">
             <div class="stick-title__container">
-              <h2 class="stick-title__text contacts__title">Дополнительно</h2>
+              <h2 class="stick-title__text program-title">Дополнительно</h2>
             </div>
           </div>
           <fieldset class="additionally__checkbox-fieldset checkbox">
+            <legend class="visually-hidden">кнопки выбора программ питания</legend>
             <ul class="checkbox__list">
               <li class="checkbox__item">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox" id="sweetener" value="sweetener" checked>
@@ -149,7 +150,6 @@
                 <label class="checkbox__label" for="vitamins">витамины</label>
               </li>
             </ul>
-            <legend class="visually-hidden">кнопки выбора программ питания</legend>
           </fieldset>
         </section>
         <div class="form__button-container">

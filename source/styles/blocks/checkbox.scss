@@ -11,6 +11,7 @@
   row-gap: 12px;
   padding: 0 20px;
   margin: 0;
+
   list-style: none;
 
   @media ($viewport-tablet) {
@@ -21,10 +22,10 @@
   }
 
   @media ($viewport-desktop) {
-    padding: 0;
     width: clamp(768px, 100vw, $max-viewport-width);
-    align-self: center;
     gap: 32px 104px;
+    align-self: center;
+    padding: 0;
   }
 }
 
@@ -36,8 +37,8 @@
   display: flex;
   align-items: center;
   column-gap: 15px;
-  cursor: pointer;
 
+  cursor: pointer;
 
   font-family: $seccond-font;
   font-size: 16px;
