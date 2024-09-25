@@ -1,0 +1,15 @@
+.title {
+  margin: 0;
+
+  font-family: $seccond-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: #000000;
+
+  @media ($viewport-tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

@@ -4,9 +4,11 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
+@import "./common/input.scss";
 /* Отдельные блоки */
 @import "./blocks/stick-title.scss";
 @import "./blocks/button.scss";
+@import "./blocks/main-title.scss";
 /* page */
 @import "./blocks/page.scss";
 /* хеадер */
@@ -42,3 +44,18 @@
 @import "./blocks/footer.scss";
 @import "./blocks/social-list.scss";
 @import "./blocks/copyright.scss";
+/* страница подбор программы */
+@import "./blocks/form-container.scss";
+/* формы */
+@import "./blocks/form.scss";
+@import "./blocks/personal-data.scss";
+@import "./blocks/inputs.scss";
+@import "./blocks/radio.scss";
+/* контакты */
+@import "./blocks/contacts.scss";
+/* коментарии */
+@import "./blocks/comments.scss";
+/* чекбоксы */
+@import "./blocks/checkbox.scss";
+@import "./blocks/additionally.scss";
+
