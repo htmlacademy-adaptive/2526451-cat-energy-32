@@ -1,0 +1,15 @@
+.program-title {
+  margin: 0;
+
+  font-weight: 400;
+  padding-right: 20px;
+  line-height: 26px;
+
+  color: #000000;
+
+  @media ($viewport-tablet) {
+    width: unset;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

@@ -11,8 +11,14 @@ body {
   line-height: 18px;
   color: #444444;
 }
-// можно ли?
+
 img {
   display: block;
   object-fit: contain;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }

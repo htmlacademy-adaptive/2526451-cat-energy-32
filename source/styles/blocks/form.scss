@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form__button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 0 20px;
+
+  @media ($viewport-tablet) {
+    padding: 0 70px;
+    gap: 60px;
+    flex-direction: row;
+  }
+
+  @media ($viewport-desktop) {
+    width: clamp(768px, 100vw, $max-viewport-width);
+    justify-content: flex-start;
+    align-self: center;
+    gap: 80px;
+    padding: 0;
+  }
+}
+
+.form__footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+
+  line-height: 16px;
+  color: #000000;
+
+  @media ($viewport-tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.form__button {
+  @media ($viewport-tablet) {
+    padding: 14px 65px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media ($viewport-desktop) {
+    flex-grow: 1;
+    max-width: 570px;
+  }
+}

@@ -1,0 +1,25 @@
+.additionally {
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+  padding: 23px 0 34px;
+
+  @media ($viewport-tablet) {
+    padding: 70px 0 49px;
+    row-gap: 59px;
+  }
+
+  @media ($viewport-desktop) {
+    padding: 75px 0 60px;
+    row-gap: 57px;
+  }
+}
+
+
+.additionally .stick-title::before {
+  top: 55%;
+
+  @media ($viewport-tablet) {
+    top: 63%;
+  }
+}

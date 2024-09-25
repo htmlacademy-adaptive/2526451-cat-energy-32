@@ -1,0 +1,23 @@
+.personal-data {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media ($viewport-tablet) {
+    gap: 80px;
+  }
+
+  @media ($viewport-desktop) {
+    width: clamp(768px, 100vw, $max-viewport-width);
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    // gap: 125px;
+  }
+}
+
+.personal-data fieldset {
+  @media ($viewport-desktop) {
+    flex-grow: 1;
+  }
+}

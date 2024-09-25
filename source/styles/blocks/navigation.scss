@@ -24,7 +24,7 @@
   }
 
   @media ($viewport-desktop) {
-    color: #ffffff;
+    color: #000000;
     padding-top: 5px;
   }
 }
@@ -53,9 +53,9 @@
   }
 }
 
-.navigation__list--catalog-font-color {
+.navigation__list--index-font-color {
   @media ($viewport-tablet) {
-    color: #000000;
+    color: #ffffff;
   }
 }
 
